@@ -1,0 +1,132 @@
+{
+  "navbar": {
+    "products": "Produk",
+    "brands": "Jenama",
+    "about": "Tentang Kami",
+    "checkout": "Daftar Keluar",
+    "cart": "Troli",
+    "login": "Log Masuk / Daftar"
+  },
+  "hero": {
+    "title": "Ubah Kesihatan Anda",
+    "subtitle": "Secara Semula Jadi",
+    "description": "Temui produk kesihatan premium yang menyokong perjalanan anda ke kehidupan yang lebih sihat dan bertenaga dengan ramuan berasaskan sains dan penyelesaian semula jadi.",
+    "shopNow": "Beli Sekarang",
+    "learnMore": "Ketahui Lebih Lanjut"
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "subtitle": "Berkomitmen untuk menyediakan solusi berasaskan tanah liat yang inovatif untuk penjagaan diri dan kebersihan halal",
+    "vision": "Visi",
+    "visionText": "Menjadi penyedia dipercayai bagi produk penjagaan diri berasaskan tanah liat dan solusi kebersihan halal, membawa kemurnian, keselamatan, dan kemudahan untuk keluarga serta industri di seluruh dunia.",
+    "mission": "Misi",
+    "missionItems": [
+      "Mencipta inovasi produk berasaskan tanah liat kaolin semula jadi untuk kulit, rumah, dan kegunaan industri.",
+      "Mempermudah dan memodenkan amalan sertu melalui sains dan pematuhan.",
+      "Memastikan setiap produk VLS selamat, berkesan, dan mudah diakses pengguna.",
+      "Menjadi peneraju dalam solusi halal, lestari, dan mesra keluarga dari Malaysia ke pasaran global."
+    ],
+    "commitment": "Komitmen Kami",
+    "commitmentText": "Kami komited untuk kecemerlangan dalam setiap produk yang kami cipta, memastikan solusi berasaskan tanah liat kami memenuhi standard kualiti, keselamatan, dan keberkesanan tertinggi. Dedikasi kami terhadap inovasi dan kepuasan pelanggan mendorong kami untuk terus memperbaiki dan mengembangkan rangkaian produk kami."
+  },
+  "products": {
+    "featured": "Produk Pilihan",
+    "featuredDescription": "Temui produk paling popular kami yang direka untuk meningkatkan perjalanan kesihatan dan kesejahteraan anda.",
+    "viewAll": "Lihat Semua Produk",
+    "productImage": "Gambar Produk",
+    "view": "Lihat",
+    "addToCart": "Tambah ke Troli",
+    "home": "Utama",
+    "breadcrumb": "Produk",
+    "productDescription": "Penerangan Produk",
+    "keyBenefits": "Manfaat Utama",
+    "howToUse": "Cara Penggunaan",
+    "relatedProducts": "Produk Berkaitan",
+    "vlskin-bodywash-500ml": {
+      "name": "VLSkin Bodywash 500ml",
+      "keyBenefits": [
+        "Membersih dengan buih halus & selesa",
+        "Menyegarkan sambil mengekalkan kelembapan semula jadi",
+        "Sesuai untuk kanak-kanak & dewasa",
+        "Wangian lembut & menenangkan"
+      ],
+      "howToUse": "Basahkan badan, tuangkan secukupnya ke tapak tangan atau span, urut perlahan ke seluruh badan, kemudian bilas bersih."
+    },
+    "vlskin-clay-bar-soap-80gm": {
+      "name": "VLSkin Clay Bar Soap 80gm",
+      "keyBenefits": [
+        "Membersih tanpa rasa kering",
+        "Memberi rasa licin selepas bilas",
+        "Saiz kompak & travel-friendly",
+        "Lebih tahan lama berbanding sabun cecair"
+      ],
+      "howToUse": "Buihkan pada tapak tangan atau span, sapukan ke kulit, bilas bersih."
+    },
+    "vlsartu-liquid-clay-1000ml": {
+      "name": "VLSartu Liquid Clay 1000ml",
+      "keyBenefits": [
+        "Bancuhan konsisten & praktikal",
+        "Solusi mudah untuk sertu najis mughallazah",
+        "Sesuai untuk permukaan logam, plastik, kaca & lantai",
+        "Pilihan saiz isi rumah & industri"
+      ],
+      "howToUse": "1. Buang kesan fizikal najis. 2. Basuh sekali dengan air bercampur Premix Sertu Solution. 3. Bilas lagi 6 kali menggunakan air biasa."
+    },
+    "vlscent-natural-sanitizer-200ml": {
+      "name": "VLScent Natural Sanitizer 200ml",
+      "keyBenefits": [
+        "Cepat kering & selesa",
+        "Tidak melekit di kulit",
+        "Saiz kecil sesuai travel & poket",
+        "Sesuai untuk kegunaan harian"
+      ],
+      "howToUse": "Sembur pada tapak tangan atau permukaan, gosok rata & biarkan kering."
+    }
+  },
+  "checkout": {
+    "title": "Daftar Keluar",
+    "emptyCart": "Troli anda kosong.",
+    "continueShopping": "Teruskan Membeli",
+    "customerInfo": "Maklumat Pelanggan",
+    "fixErrors": "Sila betulkan ralat berikut:",
+    "fullName": "Nama Penuh",
+    "emailAddress": "Alamat E-mel",
+    "phoneNumber": "Nombor Telefon",
+    "address": "Alamat",
+    "city": "Bandar",
+    "postcode": "Poskod",
+    "country": "Negara",
+    "selectCountry": "Pilih negara",
+    "placingOrder": "Memproses Pesanan...",
+    "placeOrder": "Buat Pesanan",
+    "shippingTaxes": "Penghantaran dan cukai dikira semasa daftar keluar"
+  },
+  "cart": {
+    "title": "Troli Anda",
+    "empty": "Troli anda kosong",
+    "startAdding": "Mula tambah item ke troli anda.",
+    "continueShopping": "Teruskan Membeli",
+    "subtotal": "Jumlah kecil:",
+    "each": "setiap",
+    "remove": "Buang"
+  },
+  "footer": {
+    "description": "Rakan kongsi dipercayai anda dalam kesihatan dan kesejahteraan. Kami menyediakan produk berkualiti premium yang disokong sains untuk membantu anda mencapai matlamat kesejahteraan dan hidup terbaik anda.",
+    "email": "E-mel:",
+    "phone": "Telefon:",
+    "quickLinks": "Pautan Pantas",
+    "allProducts": "Semua Produk",
+    "aboutUs": "Tentang Kami",
+    "contact": "Hubungi",
+    "shippingInfo": "Maklumat Penghantaran",
+    "returns": "Pemulangan",
+    "privacyPolicy": "Dasar Privasi",
+    "followUs": "Ikuti Kami",
+    "stayConnected": "Terus berhubung untuk kemas kini terkini dan tip kesejahteraan.",
+    "copyright": "© 2024 iSertu. Hak cipta terpelihara. | Dibina dengan Next.js & Tailwind CSS"
+  },
+  "business": {
+    "title": "Rakan Kongsi Perniagaan & Penyedia Perkhidmatan",
+    "description": "Kami bekerjasama dengan rakan kongsi dan penyedia perkhidmatan yang dipercayai untuk menyampaikan produk dan perkhidmatan terbaik kepada pelanggan kami."
+  }
+}

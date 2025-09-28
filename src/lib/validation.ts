@@ -15,6 +15,14 @@ export interface CustomerInfo {
   country: string;
 }
 
+export interface CartItem {
+  id: number;
+  name: string;
+  slug: string;
+  price: number;
+  qty: number;
+}
+
 // Email validation regex
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -74,7 +82,7 @@ export function validateCustomerInfo(customer: CustomerInfo): ValidationResult {
   };
 }
 
-export function validateCartItems(items: any[]): ValidationResult {
+export function validateCartItems(items: CartItem[]): ValidationResult {
   const errors: string[] = [];
 
   if (items.length === 0) {
@@ -102,7 +110,7 @@ export function validateCartItems(items: any[]): ValidationResult {
   };
 }
 
-export function validateCheckout(customer: CustomerInfo, items: any[]): ValidationResult {
+export function validateCheckout(customer: CustomerInfo, items: CartItem[]): ValidationResult {
   const customerValidation = validateCustomerInfo(customer);
   const cartValidation = validateCartItems(items);
 

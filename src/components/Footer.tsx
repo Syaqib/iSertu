@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-gray-900 text-white border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -9,29 +13,28 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">iSertu</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Your trusted partner in health and wellness. We provide premium quality products 
-              backed by science to help you achieve your wellness goals and live your best life.
+              {t('footer.description')}
             </p>
             <div className="mt-4">
               <p className="text-gray-300 text-sm">
-                <span className="font-medium">Email:</span> info@isertu.com
+                <span className="font-medium">{t('footer.email')}</span> info@isertu.com
               </p>
               <p className="text-gray-300 text-sm">
-                <span className="font-medium">Phone:</span> +1 (555) 123-4567
+                <span className="font-medium">{t('footer.phone')}</span> +1 (555) 123-4567
               </p>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/products"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >
-                  All Products
+                  {t('footer.allProducts')}
                 </Link>
               </li>
               <li>
@@ -39,7 +42,7 @@ export default function Footer() {
                   href="/about"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >
-                  About Us
+                  {t('footer.aboutUs')}
                 </Link>
               </li>
               <li>
@@ -47,7 +50,7 @@ export default function Footer() {
                   href="/contact"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >
-                  Contact
+                  {t('footer.contact')}
                 </Link>
               </li>
               <li>
@@ -55,7 +58,7 @@ export default function Footer() {
                   href="/shipping"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >
-                  Shipping Info
+                  {t('footer.shippingInfo')}
                 </Link>
               </li>
               <li>
@@ -63,7 +66,7 @@ export default function Footer() {
                   href="/returns"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >
-                  Returns
+                  {t('footer.returns')}
                 </Link>
               </li>
               <li>
@@ -71,7 +74,7 @@ export default function Footer() {
                   href="/privacy"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >
-                  Privacy Policy
+                  {t('footer.privacyPolicy')}
                 </Link>
               </li>
             </ul>
@@ -79,9 +82,9 @@ export default function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.followUs')}</h3>
             <p className="text-gray-300 text-sm mb-4">
-              Stay connected for the latest updates and wellness tips.
+              {t('footer.stayConnected')}
             </p>
             <div className="flex space-x-4">
               <a
@@ -124,7 +127,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 iSertu. All rights reserved. | Built with Next.js & Tailwind CSS
+            {t('footer.copyright')}
           </p>
         </div>
       </div>

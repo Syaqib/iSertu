@@ -5,9 +5,11 @@ import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import CartSummary from "@/components/CartSummary";
 import { validateCheckout, CustomerInfo } from "@/lib/validation";
+import { useTranslation } from "react-i18next";
 
 export default function CheckoutPage() {
   const { items, clearCart } = useCart();
+  const { t } = useTranslation();
   const [customer, setCustomer] = useState<CustomerInfo>({
     name: "",
     email: "",
@@ -72,7 +74,7 @@ export default function CheckoutPage() {
         country: "",
       });
       
-    } catch (error) {
+    } catch {
       setErrors(["Failed to place order. Please try again."]);
     } finally {
       setIsSubmitting(false);
@@ -83,13 +85,13 @@ export default function CheckoutPage() {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Checkout</h1>
-          <p className="text-lg text-gray-600 mb-8">Your cart is empty.</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">{t('checkout.title')}</h1>
+          <p className="text-lg text-gray-600 mb-8">{t('checkout.emptyCart')}</p>
           <Link
             href="/"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
           >
-            Continue Shopping
+            {t('checkout.continueShopping')}
           </Link>
         </div>
       </div>
@@ -99,19 +101,19 @@ export default function CheckoutPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Checkout</h1>
+        <h1 className="text-3xl font-bold text-gray-900">{t('checkout.title')}</h1>
         <Link
           href="/"
           className="text-blue-600 hover:text-blue-700 text-sm font-medium mt-2 inline-block"
         >
-          ← Continue Shopping
+          ← {t('checkout.continueShopping')}
         </Link>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Customer Information Form */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Customer Information</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">{t('checkout.customerInfo')}</h2>
           
           {errors.length > 0 && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
@@ -122,7 +124,7 @@ export default function CheckoutPage() {
                   </svg>
                 </div>
                 <div className="ml-3">
-                  <h3 className="text-sm font-medium text-red-800">Please fix the following errors:</h3>
+                  <h3 className="text-sm font-medium text-red-800">{t('checkout.fixErrors')}</h3>
                   <div className="mt-2 text-sm text-red-700">
                     <ul className="list-disc pl-5 space-y-1">
                       {errors.map((error, index) => (
@@ -138,7 +140,7 @@ export default function CheckoutPage() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                Full Name *
+                {t('checkout.fullName')} *
               </label>
               <input
                 type="text"
@@ -153,7 +155,7 @@ export default function CheckoutPage() {
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email Address *
+                {t('checkout.emailAddress')} *
               </label>
               <input
                 type="email"
@@ -168,7 +170,7 @@ export default function CheckoutPage() {
 
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                Phone Number *
+                {t('checkout.phoneNumber')} *
               </label>
               <input
                 type="tel"
@@ -183,7 +185,7 @@ export default function CheckoutPage() {
 
             <div>
               <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
-                Address *
+                {t('checkout.address')} *
               </label>
               <input
                 type="text"
@@ -199,7 +201,7 @@ export default function CheckoutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">
-                  City *
+                  {t('checkout.city')} *
                 </label>
                 <input
                   type="text"
@@ -214,7 +216,7 @@ export default function CheckoutPage() {
 
               <div>
                 <label htmlFor="postcode" className="block text-sm font-medium text-gray-700 mb-1">
-                  Postcode *
+                  {t('checkout.postcode')} *
                 </label>
                 <input
                   type="text"
@@ -230,7 +232,7 @@ export default function CheckoutPage() {
 
             <div>
               <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-1">
-                Country *
+                {t('checkout.country')} *
               </label>
               <select
                 id="country"
@@ -240,7 +242,7 @@ export default function CheckoutPage() {
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               >
-                <option value="">Select a country</option>
+                <option value="">{t('checkout.selectCountry')}</option>
                 <option value="US">United States</option>
                 <option value="CA">Canada</option>
                 <option value="GB">United Kingdom</option>
@@ -260,7 +262,7 @@ export default function CheckoutPage() {
               disabled={isSubmitting}
               className="w-full bg-blue-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
             >
-              {isSubmitting ? "Placing Order..." : "Place Order"}
+              {isSubmitting ? t('checkout.placingOrder') : t('checkout.placeOrder')}
             </button>
           </form>
         </div>

@@ -1,0 +1,132 @@
+{
+  "navbar": {
+    "products": "Products",
+    "brands": "Brands",
+    "about": "About Us",
+    "checkout": "Checkout",
+    "cart": "Cart",
+    "login": "Login / Sign Up"
+  },
+  "hero": {
+    "title": "Transform Your Health",
+    "subtitle": "Naturally",
+    "description": "Discover premium wellness products that support your journey to a healthier, more vibrant life with science-backed ingredients and natural solutions.",
+    "shopNow": "Shop Now",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Dedicated to providing innovative clay-based solutions for personal care and halal hygiene",
+    "vision": "Vision",
+    "visionText": "To be a trusted provider of clay-based personal care and halal hygiene solutions, delivering purity, safety, and convenience for families and industries worldwide.",
+    "mission": "Mission",
+    "missionItems": [
+      "To innovate products based on natural kaolin clay for skin, home, and industrial use.",
+      "To simplify and modernize the practice of sertu through science and compliance.",
+      "To ensure every VLS product is safe, effective, and accessible to consumers.",
+      "To champion halal, sustainable, and family-friendly solutions from Malaysia to the world."
+    ],
+    "commitment": "Our Commitment",
+    "commitmentText": "We are committed to excellence in every product we create, ensuring that our clay-based solutions meet the highest standards of quality, safety, and effectiveness. Our dedication to innovation and customer satisfaction drives us to continuously improve and expand our product range."
+  },
+  "products": {
+    "featured": "Featured Products",
+    "featuredDescription": "Discover our most popular products designed to enhance your health and wellness journey.",
+    "viewAll": "View All Products",
+    "productImage": "Product Image",
+    "view": "View",
+    "addToCart": "Add to Cart",
+    "home": "Home",
+    "breadcrumb": "Products",
+    "productDescription": "Product Description",
+    "keyBenefits": "Key Benefits",
+    "howToUse": "How To Use",
+    "relatedProducts": "Related Products",
+    "vlskin-bodywash-500ml": {
+      "name": "VLSkin Bodywash 500ml",
+      "keyBenefits": [
+        "Cleanses with fine, comfortable foam",
+        "Refreshes while maintaining natural moisture",
+        "Suitable for children & adults",
+        "Mild, soothing fragrance"
+      ],
+      "howToUse": "Wet the body, pour onto palm or sponge, lather gently all over, then rinse thoroughly."
+    },
+    "vlskin-clay-bar-soap-80gm": {
+      "name": "VLSkin Clay Bar Soap 80gm",
+      "keyBenefits": [
+        "Cleanses without drying",
+        "Leaves skin smooth after rinsing",
+        "Compact & travel-friendly size",
+        "Longer-lasting compared to liquid soap"
+      ],
+      "howToUse": "Lather onto palm or sponge, apply to skin, then rinse thoroughly."
+    },
+    "vlsartu-liquid-clay-1000ml": {
+      "name": "VLSartu Liquid Clay 1000ml",
+      "keyBenefits": [
+        "Consistent & practical clay mix",
+        "Simple solution for sertu cleansing of najis mughallazah",
+        "Suitable for metal, plastic, glass & floor surfaces",
+        "Available in household & industrial sizes"
+      ],
+      "howToUse": "1. Remove physical traces of impurity. 2. Wash once with water mixed with Premix Sertu Solution. 3. Rinse 6 more times with clean water."
+    },
+    "vlscent-natural-sanitizer-200ml": {
+      "name": "VLScent Natural Sanitizer 200ml",
+      "keyBenefits": [
+        "Quick-drying & comfortable",
+        "Non-sticky on skin",
+        "Small size, perfect for travel & pocket use",
+        "Ideal for everyday use"
+      ],
+      "howToUse": "Spray onto hands or surfaces, rub evenly & let dry."
+    }
+  },
+  "checkout": {
+    "title": "Checkout",
+    "emptyCart": "Your cart is empty.",
+    "continueShopping": "Continue Shopping",
+    "customerInfo": "Customer Information",
+    "fixErrors": "Please fix the following errors:",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "phoneNumber": "Phone Number",
+    "address": "Address",
+    "city": "City",
+    "postcode": "Postcode",
+    "country": "Country",
+    "selectCountry": "Select a country",
+    "placingOrder": "Placing Order...",
+    "placeOrder": "Place Order",
+    "shippingTaxes": "Shipping and taxes calculated at checkout"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "startAdding": "Start adding some items to your cart.",
+    "continueShopping": "Continue Shopping",
+    "subtotal": "Subtotal:",
+    "each": "each",
+    "remove": "Remove"
+  },
+  "footer": {
+    "description": "Your trusted partner in health and wellness. We provide premium quality products backed by science to help you achieve your wellness goals and live your best life.",
+    "email": "Email:",
+    "phone": "Phone:",
+    "quickLinks": "Quick Links",
+    "allProducts": "All Products",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "shippingInfo": "Shipping Info",
+    "returns": "Returns",
+    "privacyPolicy": "Privacy Policy",
+    "followUs": "Follow Us",
+    "stayConnected": "Stay connected for the latest updates and wellness tips.",
+    "copyright": "© 2024 iSertu. All rights reserved. | Built with Next.js & Tailwind CSS"
+  },
+  "business": {
+    "title": "Business Associates & Service Providers",
+    "description": "We work with trusted partners and service providers to deliver the best products and services to our customers."
+  }
+}

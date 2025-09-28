@@ -4,14 +4,18 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { useCart } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBrandsOpen, setIsBrandsOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const { getTotalItems } = useCart();
   const cartItemCount = getTotalItems();
   const router = useRouter();
   const brandsRef = useRef<HTMLDivElement>(null);
+  const languageRef = useRef<HTMLDivElement>(null);
+  const { t, i18n } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -27,11 +31,16 @@ export default function Navbar() {
   const handleBrandClick = (brand: string) => {
     setIsBrandsOpen(false);
     const routes = {
-      'VLSkin': '/products/vlskin-kaolin-clay-bodywash',
-      'VLScent': '/products/vlscent-natural-sanitizer',
-      'VLSartu': '/products/vlsartu-premix-sertu-solution'
+      'VLSkin': '/products/vlskin-bodywash-500ml',
+      'VLScent': '/products/vlscent-natural-sanitizer-200ml',
+      'VLSartu': '/products/vlsartu-liquid-clay-1000ml'
     };
     router.push(routes[brand as keyof typeof routes]);
+  };
+
+  const handleLanguageChange = (language: string) => {
+    i18n.changeLanguage(language);
+    setIsLanguageOpen(false);
   };
 
   // Close dropdown when clicking outside
@@ -40,16 +49,19 @@ export default function Navbar() {
       if (brandsRef.current && !brandsRef.current.contains(event.target as Node)) {
         setIsBrandsOpen(false);
       }
+      if (languageRef.current && !languageRef.current.contains(event.target as Node)) {
+        setIsLanguageOpen(false);
+      }
     };
 
-    if (isBrandsOpen) {
+    if (isBrandsOpen || isLanguageOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isBrandsOpen]);
+  }, [isBrandsOpen, isLanguageOpen]);
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
@@ -66,20 +78,67 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
+              {/* Language Toggle */}
+              <div className="relative" ref={languageRef}>
+                <button
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+                >
+                  {i18n.language === 'en' ? 'EN' : 'BM'}
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${isLanguageOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isLanguageOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-20 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
+                    <button
+                      onClick={() => handleLanguageChange('en')}
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 first:rounded-t-lg ${
+                        i18n.language === 'en' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                      }`}
+                    >
+                      EN
+                    </button>
+                    <button
+                      onClick={() => handleLanguageChange('bm')}
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 last:rounded-b-lg ${
+                        i18n.language === 'bm' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                      }`}
+                    >
+                      BM
+                    </button>
+                  </div>
+                )}
+              </div>
+              
               <button
                 onClick={scrollToProducts}
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
-                Products
+                {t('navbar.products')}
               </button>
               
               {/* Brands Dropdown */}
               <div className="relative" ref={brandsRef}>
                 <button
                   onClick={() => setIsBrandsOpen(!isBrandsOpen)}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
                 >
-                  Brands
+                  {t('navbar.brands')}
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${isBrandsOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
                 </button>
                 
                 {isBrandsOpen && (
@@ -126,13 +185,13 @@ export default function Navbar() {
                 href="/about"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
-                About
+                {t('navbar.about')}
               </Link>
               <Link
-                href="/contact"
+                href="/checkout"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
-                Contact
+                {t('navbar.checkout')}
               </Link>
             </div>
           </div>
@@ -200,12 +259,45 @@ export default function Navbar() {
                 }}
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left"
               >
-                Products
+                {t('navbar.products')}
               </button>
+              
+              {/* Mobile Language Toggle */}
+              <div className="px-3 py-2">
+                <div className="text-gray-700 text-base font-medium mb-2">Language</div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => {
+                      handleLanguageChange('en');
+                      setIsMenuOpen(false);
+                    }}
+                    className={`px-4 py-2 text-sm rounded-lg transition-colors duration-200 ${
+                      i18n.language === 'en' 
+                        ? 'bg-blue-600 text-white' 
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => {
+                      handleLanguageChange('bm');
+                      setIsMenuOpen(false);
+                    }}
+                    className={`px-4 py-2 text-sm rounded-lg transition-colors duration-200 ${
+                      i18n.language === 'bm' 
+                        ? 'bg-blue-600 text-white' 
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    BM
+                  </button>
+                </div>
+              </div>
               
               {/* Mobile Brands Section */}
               <div className="px-3 py-2">
-                <div className="text-gray-700 text-base font-medium mb-4">Brands</div>
+                <div className="text-gray-700 text-base font-medium mb-4">{t('navbar.brands')}</div>
                 <div className="grid grid-cols-3 gap-4">
                   {/* VLSkin */}
                   <button
@@ -256,14 +348,14 @@ export default function Navbar() {
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                {t('navbar.about')}
               </Link>
               <Link
-                href="/contact"
+                href="/checkout"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
+                {t('navbar.checkout')}
               </Link>
             </div>
           </div>

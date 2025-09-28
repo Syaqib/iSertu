@@ -1,16 +1,18 @@
 "use client";
 
-import { useCart, CartItem } from "@/context/CartContext";
+import { useCart } from "@/context/CartContext";
 import QuantityInput from "@/components/QuantityInput";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function CartSummary() {
   const { items, setQuantity, removeItem, getTotalPrice } = useCart();
+  const { t } = useTranslation();
 
   if (items.length === 0) {
     return (
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Your Cart</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('cart.title')}</h2>
         <div className="text-center py-8">
           <svg
             className="mx-auto h-12 w-12 text-gray-400"
@@ -25,14 +27,14 @@ export default function CartSummary() {
               d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9m0 0l1.5-6M7 13l1.5 6"
             />
           </svg>
-          <h3 className="mt-2 text-sm font-medium text-gray-900">Your cart is empty</h3>
-          <p className="mt-1 text-sm text-gray-500">Start adding some items to your cart.</p>
+          <h3 className="mt-2 text-sm font-medium text-gray-900">{t('cart.empty')}</h3>
+          <p className="mt-1 text-sm text-gray-500">{t('cart.startAdding')}</p>
           <div className="mt-6">
             <Link
               href="/"
               className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
-              Continue Shopping
+              {t('cart.continueShopping')}
             </Link>
           </div>
         </div>
@@ -43,7 +45,7 @@ export default function CartSummary() {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200">
       <div className="px-6 py-4 border-b border-gray-200">
-        <h2 className="text-xl font-semibold text-gray-900">Your Cart</h2>
+        <h2 className="text-xl font-semibold text-gray-900">{t('cart.title')}</h2>
       </div>
 
       <div className="divide-y divide-gray-200">
@@ -60,7 +62,7 @@ export default function CartSummary() {
                   </Link>
                 </h3>
                 <p className="mt-1 text-sm text-gray-500">
-                  ${item.price.toFixed(2)} each
+                  RM{item.price.toFixed(2)} {t('cart.each')}
                 </p>
               </div>
 
@@ -73,7 +75,7 @@ export default function CartSummary() {
                 
                 <div className="text-right">
                   <div className="text-sm font-medium text-gray-900">
-                    ${(item.price * item.qty).toFixed(2)}
+                    RM{(item.price * item.qty).toFixed(2)}
                   </div>
                 </div>
 
@@ -99,11 +101,11 @@ export default function CartSummary() {
 
       <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
         <div className="flex justify-between items-center text-lg font-semibold text-gray-900">
-          <span>Subtotal:</span>
-          <span>${getTotalPrice().toFixed(2)}</span>
+          <span>{t('cart.subtotal')}</span>
+          <span>RM{getTotalPrice().toFixed(2)}</span>
         </div>
         <p className="text-sm text-gray-500 mt-1">
-          Shipping and taxes calculated at checkout
+          {t('checkout.shippingTaxes')}
         </p>
       </div>
     </div>

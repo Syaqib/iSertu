@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { Product } from "@/lib/products";
 import { useCart } from "@/context/CartContext";
+import { useTranslation } from "react-i18next";
 
 interface AddToCartButtonProps {
   product: Product;
@@ -11,6 +12,7 @@ interface AddToCartButtonProps {
 export default function AddToCartButton({ product }: AddToCartButtonProps) {
   const { addItem } = useCart();
   const router = useRouter();
+  const { t } = useTranslation();
 
   const handleAddToCart = () => {
     addItem({
@@ -30,7 +32,7 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
       className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
       aria-label={`Add ${product.name} to cart`}
     >
-      Add to Cart
+      {t('products.addToCart')}
     </button>
   );
 }
