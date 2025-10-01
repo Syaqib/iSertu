@@ -6,7 +6,6 @@ import Link from "next/link";
 import { products } from "@/lib/products";
 import ProductGallery from "@/components/ProductGallery";
 import ProductCard from "@/components/ProductCard";
-import AddToCartButton from "@/components/AddToCartButton";
 import { useTranslation } from "react-i18next";
 
 interface ProductPageProps {
@@ -69,18 +68,16 @@ export default function ProductPage({ params }: ProductPageProps) {
         <div className="space-y-6">
           <div>
             <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              {product.name}
+              {t(`products.${product.slug}.name`)}
             </h1>
             <div className="text-3xl font-bold text-blue-600 mb-4">
               RM{product.price.toFixed(2)}
             </div>
             <p className="text-lg text-gray-600 leading-relaxed">
-              {product.shortDescription}
+              {t(`products.${product.slug}.shortDescription`)}
             </p>
           </div>
 
-          {/* Add to Cart Button */}
-          <AddToCartButton product={product} />
 
           {/* Product Description */}
           <div className="border-t border-gray-200 pt-6">
@@ -88,7 +85,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               {t('products.productDescription')}
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              {product.longDescription}
+              {t(`products.${product.slug}.longDescription`)}
             </p>
           </div>
 

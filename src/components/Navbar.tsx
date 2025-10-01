@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { useCart } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
@@ -10,8 +9,6 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBrandsOpen, setIsBrandsOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const { getTotalItems } = useCart();
-  const cartItemCount = getTotalItems();
   const router = useRouter();
   const brandsRef = useRef<HTMLDivElement>(null);
   const languageRef = useRef<HTMLDivElement>(null);
@@ -66,18 +63,22 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 relative">
           {/* Logo */}
           <Link 
             href="/" 
-            className="flex-shrink-0 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors duration-200"
+            className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
           >
-            iSertu
+            <img
+              src="/images/VLSme-Logo.png"
+              alt="VLSme Logo"
+              className="h-10 w-auto"
+            />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+            <div className="flex items-baseline space-x-8">
               {/* Language Toggle */}
               <div className="relative" ref={languageRef}>
                 <button
@@ -188,39 +189,16 @@ export default function Navbar() {
                 {t('navbar.about')}
               </Link>
               <Link
-                href="/checkout"
+                href="/contact"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
-                {t('navbar.checkout')}
+                {t('navbar.contact')}
               </Link>
             </div>
           </div>
 
-          {/* Cart Button */}
-          <div className="flex items-center">
-            <Link
-              href="/checkout"
-              className="relative bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              aria-label={`Shopping cart with ${cartItemCount} items`}
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9m0 0l1.5-6M7 13l1.5 6" />
-              </svg>
-              {cartItemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  {cartItemCount}
-                </span>
-              )}
-            </Link>
-          </div>
+          {/* Right side spacer for balance */}
+          <div className="hidden md:block w-24"></div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -252,6 +230,21 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+              {/* Mobile Logo */}
+              <div className="flex justify-center mb-4">
+                <Link 
+                  href="/" 
+                  className="hover:opacity-80 transition-opacity duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <img
+                    src="/images/VLSme-Logo.png"
+                    alt="VLSme Logo"
+                    className="h-8 w-auto"
+                  />
+                </Link>
+              </div>
+              
               <button
                 onClick={() => {
                   scrollToProducts();
@@ -351,11 +344,11 @@ export default function Navbar() {
                 {t('navbar.about')}
               </Link>
               <Link
-                href="/checkout"
+                href="/contact"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('navbar.checkout')}
+                {t('navbar.contact')}
               </Link>
             </div>
           </div>

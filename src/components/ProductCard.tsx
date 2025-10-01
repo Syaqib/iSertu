@@ -12,9 +12,19 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { t } = useTranslation();
   return (
     <div className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200">
-      {/* Image placeholder */}
+      {/* Product Image */}
       <div className="aspect-square bg-gray-100 relative overflow-hidden">
-        <div className="w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-contain"
+          onError={(e) => {
+            const target = e.target as HTMLImageElement;
+            target.style.display = 'none';
+            target.nextElementSibling?.classList.remove('hidden');
+          }}
+        />
+        <div className="w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center hidden">
           <div className="text-gray-400 text-sm font-medium">{t('products.productImage')}</div>
         </div>
       </div>
@@ -22,10 +32,10 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* Content */}
       <div className="p-4">
         <h3 className="font-semibold text-gray-900 text-lg mb-2 line-clamp-2">
-          {product.name}
+          {t(`products.${product.slug}.name`)}
         </h3>
         <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-          {product.shortDescription}
+          {t(`products.${product.slug}.shortDescription`)}
         </p>
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-gray-900">

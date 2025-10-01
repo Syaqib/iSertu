@@ -5,7 +5,17 @@ interface ProductGalleryProps {
 export default function ProductGallery({ image }: ProductGalleryProps) {
   return (
     <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-      <div className="w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+      <img
+        src={image}
+        alt="Product Image"
+        className="w-full h-full object-contain"
+        onError={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.style.display = 'none';
+          target.nextElementSibling?.classList.remove('hidden');
+        }}
+      />
+      <div className="w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center hidden">
         <div className="text-center">
           <div className="text-gray-400 text-lg font-medium mb-2">Product Image</div>
           <div className="text-gray-300 text-sm">{image}</div>

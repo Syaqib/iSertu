@@ -3,6 +3,7 @@
     "products": "Produk",
     "brands": "Jenama",
     "about": "Tentang Kami",
+    "contact": "Hubungi Kami",
     "checkout": "Daftar Keluar",
     "cart": "Troli",
     "login": "Log Masuk / Daftar"
@@ -44,6 +45,8 @@
     "relatedProducts": "Produk Berkaitan",
     "vlskin-bodywash-500ml": {
       "name": "VLSkin Bodywash 500ml",
+      "shortDescription": "Pembersihan lembut dengan buih halus dan selesa (500ml)",
+      "longDescription": "VLSkin Bodywash diformulasikan dengan bahan-bahan premium untuk memberikan pembersihan yang lembut namun berkesan untuk semua jenis kulit. Formula canggih kami menghasilkan buih halus dan selesa yang membersihkan dengan sempurna sambil mengekalkan keseimbangan kelembapan semula jadi kulit anda. Sesuai untuk kegunaan harian oleh seluruh keluarga, bodywash ini meninggalkan kulit anda berasa segar, bersih, dan lembut tanpa bahan kimia keras atau wangian tiruan.",
       "keyBenefits": [
         "Membersih dengan buih halus & selesa",
         "Menyegarkan sambil mengekalkan kelembapan semula jadi",
@@ -54,6 +57,8 @@
     },
     "vlskin-clay-bar-soap-80gm": {
       "name": "VLSkin Clay Bar Soap 80gm",
+      "shortDescription": "Sabun tanah liat kompak untuk pembersihan lembut tanpa kekeringan",
+      "longDescription": "VLSkin Clay Bar Soap menggabungkan kuasa pembersihan semula jadi tanah liat dengan sifat pelembap yang lembut. Bar kompak 80gm ini sesuai untuk perjalanan dan kegunaan harian, memberikan pembersihan yang berkesan tanpa menghilangkan minyak semula jadi kulit anda. Formula tanah liat membantu membuang kekotoran sambil meninggalkan kulit anda berasa licin dan segar. Bentuk pepejalnya menjadikannya lebih ekonomik dan mesra alam berbanding sabun cecair.",
       "keyBenefits": [
         "Membersih tanpa rasa kering",
         "Memberi rasa licin selepas bilas",
@@ -64,6 +69,8 @@
     },
     "vlsartu-liquid-clay-1000ml": {
       "name": "VLSartu Liquid Clay 1000ml",
+      "shortDescription": "Bancuhan tanah liat konsisten untuk pembersihan sertu (1000ml)",
+      "longDescription": "VLSartu Liquid Clay menyediakan solusi yang konsisten dan praktikal untuk pembersihan sertu mengikut prinsip Islam. Larutan tanah liat pra-campuran ini menghapuskan tekaan dalam menyediakan bancuhan tanah liat yang betul untuk membersihkan najis mughallazah. Bentuk cecair memastikan pengedaran yang sekata dan pembersihan yang berkesan pada pelbagai permukaan termasuk logam, plastik, kaca, dan lantai. Tersedia dalam saiz isi rumah dan industri untuk memenuhi keperluan yang berbeza.",
       "keyBenefits": [
         "Bancuhan konsisten & praktikal",
         "Solusi mudah untuk sertu najis mughallazah",
@@ -74,6 +81,8 @@
     },
     "vlscent-natural-sanitizer-200ml": {
       "name": "VLScent Natural Sanitizer 200ml",
+      "shortDescription": "Sanitizer semula jadi cepat kering untuk tangan dan permukaan (200ml)",
+      "longDescription": "VLScent Natural Sanitizer menawarkan sanitasi tangan dan permukaan yang berkesan menggunakan bahan-bahan semula jadi. Botol sembur 200ml ini memberikan sanitasi cepat kering dan tidak melekit yang selesa untuk kegunaan harian. Saiz kompak menjadikannya sesuai untuk perjalanan, pejabat, atau kegunaan peribadi. Diformulasikan dengan bahan-bahan semula jadi, ia memberikan sanitasi yang boleh dipercayai tanpa bahan kimia keras, menjadikannya selamat untuk kegunaan kerap oleh seluruh keluarga.",
       "keyBenefits": [
         "Cepat kering & selesa",
         "Tidak melekit di kulit",
@@ -128,5 +137,17 @@
   "business": {
     "title": "Rakan Kongsi Perniagaan & Penyedia Perkhidmatan",
     "description": "Kami bekerjasama dengan rakan kongsi dan penyedia perkhidmatan yang dipercayai untuk menyampaikan produk dan perkhidmatan terbaik kepada pelanggan kami."
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Hubungi kami untuk sebarang pertanyaan atau sokongan",
+    "companyInfo": "Maklumat Syarikat",
+    "companyName": "Nama Syarikat",
+    "address": "Alamat",
+    "contactDetails": "Butiran Hubungan",
+    "telephone": "Telefon",
+    "attention": "Perhatian",
+    "additionalInfo": "Maklumat Tambahan",
+    "description": "Kami di sini untuk membantu anda dengan sebarang soalan mengenai produk atau perkhidmatan kami. Jangan teragak-agak untuk menghubungi kami menggunakan maklumat hubungan yang disediakan di atas, dan kami akan membalas anda secepat mungkin."
   }
 }
