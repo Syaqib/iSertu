@@ -7,16 +7,14 @@ export default function BusinessAssociates() {
   const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  // Placeholder logos - you can replace these with actual logos later
+  // Partner logos
   const logos = [
-    { id: 1, name: "Partner 1", logo: "🏢" },
-    { id: 2, name: "Partner 2", logo: "🏭" },
-    { id: 3, name: "Partner 3", logo: "🏪" },
-    { id: 4, name: "Partner 4", logo: "🏬" },
-    { id: 5, name: "Partner 5", logo: "🏢" },
-    { id: 6, name: "Partner 6", logo: "🏭" },
-    { id: 7, name: "Partner 7", logo: "🏪" },
-    { id: 8, name: "Partner 8", logo: "🏬" },
+    { id: 1, name: "SVS", logo: "/images/SVS.png", alt: "SVS Logo" },
+    { id: 2, name: "MIS", logo: "/images/MIS.png", alt: "MIS Logo" },
+    { id: 3, name: "Bumi", logo: "/images/bumi.png", alt: "Bumi Logo" },
+    { id: 4, name: "HIS", logo: "/images/his.png", alt: "HIS Logo" },
+    { id: 5, name: "KKTM", logo: "/images/kktm.png", alt: "KKTM Logo" },
+    { id: 6, name: "Halvec", logo: "/images/halvec.png", alt: "Halvec Logo" },
   ];
 
   const slidesToShow = 4;
@@ -56,12 +54,27 @@ export default function BusinessAssociates() {
                     {logos.slice(slideIndex * slidesToShow, (slideIndex + 1) * slidesToShow).map((logo) => (
                       <div
                         key={logo.id}
-                        className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                        className="flex items-center justify-center p-4 hover:opacity-80 transition-opacity duration-200 cursor-pointer"
                       >
-                        <div className="text-4xl mb-2">{logo.logo}</div>
-                        <span className="text-sm font-medium text-gray-700 text-center">
-                          {logo.name}
-                        </span>
+                        <div className="w-32 h-20 flex items-center justify-center overflow-hidden">
+                          <img
+                            src={logo.logo}
+                            alt={logo.alt}
+                            className={`max-w-full max-h-full object-contain ${
+                              logo.name === 'MIS' || logo.name === 'SVS' 
+                                ? 'scale-150' 
+                                : ''
+                            }`}
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                              target.nextElementSibling?.classList.remove('hidden');
+                            }}
+                          />
+                          <div className="hidden text-4xl text-gray-400">
+                            🏢
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>

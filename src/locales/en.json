@@ -15,6 +15,29 @@
     "shopNow": "Shop Now",
     "learnMore": "Learn More"
   },
+  "clayWaterEnzyme": {
+    "title": "Why Clay Water Enzyme?",
+    "description": "We believe true cleanliness starts from the most basic element: earth. Clay Water Enzyme (CWE) is a kaolin clay–based innovation that is not only cleansing, but also safe, natural, and acts as a natural antiseptic.",
+    "points": [
+      {
+        "title": "Natural origin",
+        "description": "Kaolin clay has been used for centuries as a cleansing and detoxifying agent. We combine it with enzyme technology for maximum effectiveness."
+      },
+      {
+        "title": "Health & safety",
+        "description": "Free from harsh chemicals, gentle on skin, suitable for the whole family."
+      },
+      {
+        "title": "Shariah compliance",
+        "description": "The formula can be used for sertu (najis mughallazah), making it simple, fast, and reliable."
+      },
+      {
+        "title": "Versatile use",
+        "description": "From personal care and daily sanitation to halal industry needs, CWE fits modern lifestyles."
+      }
+    ],
+    "conclusion": "With CWE, we aim to deliver hygiene solutions that are cleaner, safer, and more blessed."
+  },
   "about": {
     "title": "About Us",
     "subtitle": "Dedicated to providing innovative clay-based solutions for personal care and halal hygiene",
