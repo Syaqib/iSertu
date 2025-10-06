@@ -9,12 +9,12 @@ export default function BusinessAssociates() {
   
   // Partner logos
   const logos = [
-    { id: 1, name: "SVS", logo: "/images/SVS.png", alt: "SVS Logo" },
-    { id: 2, name: "MIS", logo: "/images/MIS.png", alt: "MIS Logo" },
-    { id: 3, name: "Bumi", logo: "/images/bumi.png", alt: "Bumi Logo" },
-    { id: 4, name: "HIS", logo: "/images/his.png", alt: "HIS Logo" },
-    { id: 5, name: "KKTM", logo: "/images/kktm.png", alt: "KKTM Logo" },
-    { id: 6, name: "Halvec", logo: "/images/halvec.png", alt: "Halvec Logo" },
+    { id: 1, name: "SVS", logo: "/images/SVS.png", alt: "SVS Logo", fullName: "Seven Value Solution" },
+    { id: 2, name: "MIS", logo: "/images/MIS.png", alt: "MIS Logo", fullName: "M.I.S International" },
+    { id: 3, name: "Bumi", logo: "/images/bumi.png", alt: "Bumi Logo", fullName: "Bumi Transformasi Digital" },
+    { id: 4, name: "HIS", logo: "/images/his.png", alt: "HIS Logo", fullName: "Halal International Selangor" },
+    { id: 5, name: "KKTM", logo: "/images/kktm.png", alt: "KKTM Logo", fullName: "Kolej Kemahiran Tinggi MARA" },
+    { id: 6, name: "Halvec", logo: "/images/halvec.png", alt: "Halvec Logo", fullName: "Halvec Laboratories" },
   ];
 
   const slidesToShow = 4;
@@ -54,9 +54,9 @@ export default function BusinessAssociates() {
                     {logos.slice(slideIndex * slidesToShow, (slideIndex + 1) * slidesToShow).map((logo) => (
                       <div
                         key={logo.id}
-                        className="flex items-center justify-center p-4 hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+                        className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
                       >
-                        <div className="w-32 h-20 flex items-center justify-center overflow-hidden">
+                        <div className="w-32 h-20 flex items-center justify-center overflow-hidden mb-3">
                           <img
                             src={logo.logo}
                             alt={logo.alt}
@@ -75,6 +75,9 @@ export default function BusinessAssociates() {
                             🏢
                           </div>
                         </div>
+                        <p className="text-sm font-medium text-gray-700 text-center leading-tight">
+                          {logo.fullName}
+                        </p>
                       </div>
                     ))}
                   </div>

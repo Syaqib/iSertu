@@ -28,9 +28,8 @@ export default function Navbar() {
   const handleBrandClick = (brand: string) => {
     setIsBrandsOpen(false);
     const routes = {
-      'VLSkin': '/products/vlskin-bodywash-500ml',
-      'VLScent': '/products/vlscent-natural-sanitizer-200ml',
-      'VLSartu': '/products/vlsartu-liquid-clay-1000ml'
+      'VLSuper': '/products/vlsartu-liquid-clay-1000ml', // Sertu and Sanitizer
+      'VLSkin': '/products/vlskin-bodywash-500ml' // Soap Bar and Bodywash
     };
     router.push(routes[brand as keyof typeof routes]);
   };
@@ -75,6 +74,47 @@ export default function Navbar() {
               className="h-10 w-auto"
             />
           </Link>
+
+          {/* Mobile Language Toggle - Visible on top navbar (right side) */}
+          <div className="md:hidden flex items-center">
+            <div className="relative" ref={languageRef}>
+              <button
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+              >
+                {i18n.language === 'en' ? 'EN' : 'BM'}
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${isLanguageOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {isLanguageOpen && (
+                <div className="absolute top-full right-0 mt-2 w-20 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
+                  <button
+                    onClick={() => handleLanguageChange('en')}
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 first:rounded-t-lg ${
+                      i18n.language === 'en' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => handleLanguageChange('bm')}
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 last:rounded-b-lg ${
+                      i18n.language === 'bm' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                    }`}
+                  >
+                    BM
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
 
           {/* Desktop Navigation - Centered */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
@@ -143,39 +183,38 @@ export default function Navbar() {
                 </button>
                 
                 {isBrandsOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-white shadow-xl rounded-lg p-6 z-50 border border-gray-200">
-                    <div className="grid grid-cols-3 gap-6">
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-white shadow-xl rounded-lg p-6 z-50 border border-gray-200">
+                    <div className="grid grid-cols-2 gap-6">
+                      {/* VLSuper */}
+                      <button
+                        onClick={() => handleBrandClick('VLSuper')}
+                        className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
+                      >
+                        <div className="bg-gradient-to-br from-orange-100 to-orange-200 h-24 w-28 rounded-lg mb-3 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200">
+                          <img
+                            src="/images/vlsuper_label.png"
+                            alt="VLSuper Label"
+                            className="h-16 w-auto object-contain"
+                          />
+                        </div>
+                        <span className="text-sm font-medium text-gray-700 text-center">VLSuper</span>
+                        <span className="text-xs text-gray-500 text-center">Sertu & Sanitizer</span>
+                      </button>
+                      
                       {/* VLSkin */}
                       <button
                         onClick={() => handleBrandClick('VLSkin')}
                         className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
                       >
                         <div className="bg-gradient-to-br from-blue-100 to-blue-200 h-24 w-28 rounded-lg mb-3 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200">
-                          <span className="text-blue-600 text-sm font-semibold">VLSkin</span>
+                          <img
+                            src="/images/vlskin_label.jpg"
+                            alt="VLSkin Label"
+                            className="h-16 w-auto object-contain"
+                          />
                         </div>
                         <span className="text-sm font-medium text-gray-700 text-center">VLSkin</span>
-                      </button>
-                      
-                      {/* VLScent */}
-                      <button
-                        onClick={() => handleBrandClick('VLScent')}
-                        className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
-                      >
-                        <div className="bg-gradient-to-br from-green-100 to-green-200 h-24 w-28 rounded-lg mb-3 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200">
-                          <span className="text-green-600 text-sm font-semibold">VLScent</span>
-                        </div>
-                        <span className="text-sm font-medium text-gray-700 text-center">VLScent</span>
-                      </button>
-                      
-                      {/* VLSartu */}
-                      <button
-                        onClick={() => handleBrandClick('VLSartu')}
-                        className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
-                      >
-                        <div className="bg-gradient-to-br from-purple-100 to-purple-200 h-24 w-28 rounded-lg mb-3 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200">
-                          <span className="text-purple-600 text-sm font-semibold">VLSartu</span>
-                        </div>
-                        <span className="text-sm font-medium text-gray-700 text-center">VLSartu</span>
+                        <span className="text-xs text-gray-500 text-center">Soap Bar & Bodywash</span>
                       </button>
                     </div>
                   </div>
@@ -187,6 +226,12 @@ export default function Navbar() {
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
                 {t('navbar.about')}
+              </Link>
+              <Link
+                href="/our-story"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              >
+                {t('navbar.ourStory')}
               </Link>
               <Link
                 href="/contact"
@@ -229,21 +274,7 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              {/* Mobile Logo */}
-              <div className="flex justify-center mb-4">
-                <Link 
-                  href="/" 
-                  className="hover:opacity-80 transition-opacity duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <img
-                    src="/images/VLSme-Logo.png"
-                    alt="VLSme Logo"
-                    className="h-8 w-auto"
-                  />
-                </Link>
-              </div>
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-50 border-t border-gray-200">
               
               <button
                 onClick={() => {
@@ -255,43 +286,29 @@ export default function Navbar() {
                 {t('navbar.products')}
               </button>
               
-              {/* Mobile Language Toggle */}
-              <div className="px-3 py-2">
-                <div className="text-gray-700 text-base font-medium mb-2">Language</div>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => {
-                      handleLanguageChange('en');
-                      setIsMenuOpen(false);
-                    }}
-                    className={`px-4 py-2 text-sm rounded-lg transition-colors duration-200 ${
-                      i18n.language === 'en' 
-                        ? 'bg-blue-600 text-white' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    EN
-                  </button>
-                  <button
-                    onClick={() => {
-                      handleLanguageChange('bm');
-                      setIsMenuOpen(false);
-                    }}
-                    className={`px-4 py-2 text-sm rounded-lg transition-colors duration-200 ${
-                      i18n.language === 'bm' 
-                        ? 'bg-blue-600 text-white' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    BM
-                  </button>
-                </div>
-              </div>
-              
               {/* Mobile Brands Section */}
               <div className="px-3 py-2">
                 <div className="text-gray-700 text-base font-medium mb-4">{t('navbar.brands')}</div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 gap-4">
+                  {/* VLSuper */}
+                  <button
+                    onClick={() => {
+                      handleBrandClick('VLSuper');
+                      setIsMenuOpen(false);
+                    }}
+                    className="flex flex-col items-center p-3 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
+                  >
+                    <div className="bg-gradient-to-br from-orange-100 to-orange-200 h-16 w-20 rounded-lg mb-2 flex items-center justify-center shadow-sm">
+                      <img
+                        src="/images/vlsuper_label.png"
+                        alt="VLSuper Label"
+                        className="h-12 w-auto object-contain"
+                      />
+                    </div>
+                    <span className="text-xs font-medium text-gray-700 text-center">VLSuper</span>
+                    <span className="text-xs text-gray-500 text-center">Sertu & Sanitizer</span>
+                  </button>
+                  
                   {/* VLSkin */}
                   <button
                     onClick={() => {
@@ -301,37 +318,14 @@ export default function Navbar() {
                     className="flex flex-col items-center p-3 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
                   >
                     <div className="bg-gradient-to-br from-blue-100 to-blue-200 h-16 w-20 rounded-lg mb-2 flex items-center justify-center shadow-sm">
-                      <span className="text-blue-600 text-xs font-semibold">VLSkin</span>
+                      <img
+                        src="/images/vlskin_label.jpg"
+                        alt="VLSkin Label"
+                        className="h-12 w-auto object-contain"
+                      />
                     </div>
                     <span className="text-xs font-medium text-gray-700 text-center">VLSkin</span>
-                  </button>
-                  
-                  {/* VLScent */}
-                  <button
-                    onClick={() => {
-                      handleBrandClick('VLScent');
-                      setIsMenuOpen(false);
-                    }}
-                    className="flex flex-col items-center p-3 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
-                  >
-                    <div className="bg-gradient-to-br from-green-100 to-green-200 h-16 w-20 rounded-lg mb-2 flex items-center justify-center shadow-sm">
-                      <span className="text-green-600 text-xs font-semibold">VLScent</span>
-                    </div>
-                    <span className="text-xs font-medium text-gray-700 text-center">VLScent</span>
-                  </button>
-                  
-                  {/* VLSartu */}
-                  <button
-                    onClick={() => {
-                      handleBrandClick('VLSartu');
-                      setIsMenuOpen(false);
-                    }}
-                    className="flex flex-col items-center p-3 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
-                  >
-                    <div className="bg-gradient-to-br from-purple-100 to-purple-200 h-16 w-20 rounded-lg mb-2 flex items-center justify-center shadow-sm">
-                      <span className="text-purple-600 text-xs font-semibold">VLSartu</span>
-                    </div>
-                    <span className="text-xs font-medium text-gray-700 text-center">VLSartu</span>
+                    <span className="text-xs text-gray-500 text-center">Soap Bar & Bodywash</span>
                   </button>
                 </div>
               </div>
@@ -342,6 +336,13 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.about')}
+              </Link>
+              <Link
+                href="/our-story"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navbar.ourStory')}
               </Link>
               <Link
                 href="/contact"

@@ -17,10 +17,13 @@ export default function Footer() {
             </p>
             <div className="mt-4">
               <p className="text-gray-300 text-sm">
-                <span className="font-medium">{t('footer.email')}</span> info@isertu.com
+                <span className="font-medium">{t('footer.email')}</span> info@svs.com
               </p>
               <p className="text-gray-300 text-sm">
-                <span className="font-medium">{t('footer.phone')}</span> +1 (555) 123-4567
+                <span className="font-medium">{t('footer.phone')}</span> +6011 3960 4278
+              </p>
+              <p className="text-gray-300 text-sm">
+                <span className="font-medium">{t('footer.phone')}</span> +6017 358 4920
               </p>
             </div>
           </div>

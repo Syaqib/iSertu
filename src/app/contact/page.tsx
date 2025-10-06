@@ -18,6 +18,20 @@ export default function ContactPage() {
           </p>
         </div>
 
+        {/* Trusted Agency Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            {t('contact.trustedAgency')}
+          </h2>
+          <div className="flex justify-center">
+            <img
+              src="/images/SVS.png"
+              alt="SVS Logo"
+              className="h-24 w-auto object-contain"
+            />
+          </div>
+        </div>
+
         {/* Contact Information */}
         <div className="bg-gray-50 rounded-lg p-8 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -59,16 +73,9 @@ export default function ContactPage() {
                     {t('contact.telephone')}
                   </h3>
                   <div className="space-y-1">
-                    <p className="text-gray-600">+60 11 3960 4278</p>
-                    <p className="text-gray-600">+60 17 358 4920</p>
+                    <p className="text-gray-600">+6011 3960 4278</p>
+                    <p className="text-gray-600">+6017 358 4920</p>
                   </div>
-                </div>
-                
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">
-                    {t('contact.attention')}
-                  </h3>
-                  <p className="text-gray-600">Zubir</p>
                 </div>
               </div>
             </div>

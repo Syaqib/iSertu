@@ -3,6 +3,7 @@
     "products": "Produk",
     "brands": "Jenama",
     "about": "Tentang Kami",
+    "ourStory": "Cerita Kami",
     "contact": "Hubungi Kami",
     "checkout": "Daftar Keluar",
     "cart": "Troli",
@@ -14,44 +15,6 @@
     "description": "Temui produk kesihatan premium yang menyokong perjalanan anda ke kehidupan yang lebih sihat dan bertenaga dengan ramuan berasaskan sains dan penyelesaian semula jadi.",
     "shopNow": "Beli Sekarang",
     "learnMore": "Ketahui Lebih Lanjut"
-  },
-  "clayWaterEnzyme": {
-    "title": "Kenapa Clay Water Enzyme?",
-    "description": "Kami percaya pembersihan sebenar bermula dari bahan paling asas: tanah. Clay Water Enzyme (CWE) ialah inovasi berasaskan kaolin clay yang bukan sekadar bersih, tetapi juga selamat, semula jadi, dan berfungsi sebagai antiseptik semula jadi.",
-    "points": [
-      {
-        "title": "Asal-usul semula jadi",
-        "description": "Kaolin clay digunakan sejak berabad-abad sebagai bahan pembersih dan penyerap toksin. Kami gabungkan dengan teknologi enzim untuk keberkesanan maksimum."
-      },
-      {
-        "title": "Kesihatan & keselamatan",
-        "description": "Bebas bahan kimia keras, lembut pada kulit, sesuai untuk seisi keluarga."
-      },
-      {
-        "title": "Kepatuhan Syariah",
-        "description": "Formula boleh digunakan untuk sertu (najis mughallazah), menjadikannya mudah, pantas, dan diyakini."
-      },
-      {
-        "title": "Serbaguna",
-        "description": "Dari penjagaan diri, sanitasi harian, hingga industri halal, produk CWE memenuhi keperluan moden."
-      }
-    ],
-    "conclusion": "Dengan CWE, kami mahu membawa solusi kebersihan yang lebih bersih, lebih selamat, dan lebih berkat."
-  },
-  "about": {
-    "title": "Tentang Kami",
-    "subtitle": "Berkomitmen untuk menyediakan solusi berasaskan tanah liat yang inovatif untuk penjagaan diri dan kebersihan halal",
-    "vision": "Visi",
-    "visionText": "Menjadi penyedia dipercayai bagi produk penjagaan diri berasaskan tanah liat dan solusi kebersihan halal, membawa kemurnian, keselamatan, dan kemudahan untuk keluarga serta industri di seluruh dunia.",
-    "mission": "Misi",
-    "missionItems": [
-      "Mencipta inovasi produk berasaskan tanah liat kaolin semula jadi untuk kulit, rumah, dan kegunaan industri.",
-      "Mempermudah dan memodenkan amalan sertu melalui sains dan pematuhan.",
-      "Memastikan setiap produk VLS selamat, berkesan, dan mudah diakses pengguna.",
-      "Menjadi peneraju dalam solusi halal, lestari, dan mesra keluarga dari Malaysia ke pasaran global."
-    ],
-    "commitment": "Komitmen Kami",
-    "commitmentText": "Kami komited untuk kecemerlangan dalam setiap produk yang kami cipta, memastikan solusi berasaskan tanah liat kami memenuhi standard kualiti, keselamatan, dan keberkesanan tertinggi. Dedikasi kami terhadap inovasi dan kepuasan pelanggan mendorong kami untuk terus memperbaiki dan mengembangkan rangkaian produk kami."
   },
   "products": {
     "featured": "Produk Pilihan",
@@ -164,12 +127,12 @@
   "contact": {
     "title": "Hubungi Kami",
     "subtitle": "Hubungi kami untuk sebarang pertanyaan atau sokongan",
+    "trustedAgency": "Agensi Jualan & Pemasaran Dipercayai",
     "companyInfo": "Maklumat Syarikat",
     "companyName": "Nama Syarikat",
     "address": "Alamat",
     "contactDetails": "Butiran Hubungan",
     "telephone": "Telefon",
-    "attention": "Perhatian",
     "additionalInfo": "Maklumat Tambahan",
     "description": "Kami di sini untuk membantu anda dengan sebarang soalan mengenai produk atau perkhidmatan kami. Jangan teragak-agak untuk menghubungi kami menggunakan maklumat hubungan yang disediakan di atas, dan kami akan membalas anda secepat mungkin."
   }

@@ -3,6 +3,7 @@
     "products": "Products",
     "brands": "Brands",
     "about": "About Us",
+    "ourStory": "Our Story",
     "contact": "Contact Us",
     "checkout": "Checkout",
     "cart": "Cart",
@@ -14,44 +15,6 @@
     "description": "Discover premium wellness products that support your journey to a healthier, more vibrant life with science-backed ingredients and natural solutions.",
     "shopNow": "Shop Now",
     "learnMore": "Learn More"
-  },
-  "clayWaterEnzyme": {
-    "title": "Why Clay Water Enzyme?",
-    "description": "We believe true cleanliness starts from the most basic element: earth. Clay Water Enzyme (CWE) is a kaolin clay–based innovation that is not only cleansing, but also safe, natural, and acts as a natural antiseptic.",
-    "points": [
-      {
-        "title": "Natural origin",
-        "description": "Kaolin clay has been used for centuries as a cleansing and detoxifying agent. We combine it with enzyme technology for maximum effectiveness."
-      },
-      {
-        "title": "Health & safety",
-        "description": "Free from harsh chemicals, gentle on skin, suitable for the whole family."
-      },
-      {
-        "title": "Shariah compliance",
-        "description": "The formula can be used for sertu (najis mughallazah), making it simple, fast, and reliable."
-      },
-      {
-        "title": "Versatile use",
-        "description": "From personal care and daily sanitation to halal industry needs, CWE fits modern lifestyles."
-      }
-    ],
-    "conclusion": "With CWE, we aim to deliver hygiene solutions that are cleaner, safer, and more blessed."
-  },
-  "about": {
-    "title": "About Us",
-    "subtitle": "Dedicated to providing innovative clay-based solutions for personal care and halal hygiene",
-    "vision": "Vision",
-    "visionText": "To be a trusted provider of clay-based personal care and halal hygiene solutions, delivering purity, safety, and convenience for families and industries worldwide.",
-    "mission": "Mission",
-    "missionItems": [
-      "To innovate products based on natural kaolin clay for skin, home, and industrial use.",
-      "To simplify and modernize the practice of sertu through science and compliance.",
-      "To ensure every VLS product is safe, effective, and accessible to consumers.",
-      "To champion halal, sustainable, and family-friendly solutions from Malaysia to the world."
-    ],
-    "commitment": "Our Commitment",
-    "commitmentText": "We are committed to excellence in every product we create, ensuring that our clay-based solutions meet the highest standards of quality, safety, and effectiveness. Our dedication to innovation and customer satisfaction drives us to continuously improve and expand our product range."
   },
   "products": {
     "featured": "Featured Products",
@@ -164,12 +127,12 @@
   "contact": {
     "title": "Contact Us",
     "subtitle": "Get in touch with us for any inquiries or support",
+    "trustedAgency": "Trusted Sales & Marketing Agency",
     "companyInfo": "Company Information",
     "companyName": "Company Name",
     "address": "Address",
     "contactDetails": "Contact Details",
     "telephone": "Telephone",
-    "attention": "Attention",
     "additionalInfo": "Additional Information",
     "description": "We are here to help you with any questions about our products or services. Feel free to reach out to us using the contact information provided above, and we will get back to you as soon as possible."
   }
