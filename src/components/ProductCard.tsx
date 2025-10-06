@@ -11,7 +11,7 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const { t } = useTranslation();
   return (
-    <div className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200">
+    <div className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
       {/* Product Image */}
       <div className="aspect-square bg-gray-100 relative overflow-hidden">
         <img
@@ -30,24 +30,26 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
       
       {/* Content */}
-      <div className="p-4">
-        <h3 className="font-semibold text-gray-900 text-lg mb-2 line-clamp-2">
+      <div className="p-4 flex flex-col flex-grow">
+        <h3 className="font-semibold text-gray-900 text-lg mb-2 line-clamp-2 min-h-[3.5rem]">
           {t(`products.${product.slug}.name`)}
         </h3>
-        <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-          {t(`products.${product.slug}.shortDescription`)}
-        </p>
-        <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-gray-900">
-            RM{product.price.toFixed(2)}
-          </span>
-          <Link
-            href={`/products/${product.slug}`}
-            className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            aria-label={`View details for ${product.name}`}
-          >
-            {t('products.view')}
-          </Link>
+        <div className="flex-grow flex flex-col justify-end">
+          <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+            {t(`products.${product.slug}.shortDescription`)}
+          </p>
+          <div className="flex items-center justify-between">
+            <span className="text-xl font-bold text-gray-900">
+              RM{product.price.toFixed(2)}
+            </span>
+            <Link
+              href={`/products/${product.slug}`}
+              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              aria-label={`View details for ${product.name}`}
+            >
+              {t('products.view')}
+            </Link>
+          </div>
         </div>
       </div>
     </div>

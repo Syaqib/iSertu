@@ -62,7 +62,7 @@ export default function BusinessAssociates() {
                             alt={logo.alt}
                             className={`max-w-full max-h-full object-contain ${
                               logo.name === 'MIS' || logo.name === 'SVS' 
-                                ? 'scale-150' 
+                                ? 'scale-200' 
                                 : ''
                             }`}
                             onError={(e) => {

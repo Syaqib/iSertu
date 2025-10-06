@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import '@/lib/i18n';
+import i18n from '@/lib/i18n';
 
 interface I18nProviderProps {
   children: React.ReactNode;
@@ -9,8 +10,11 @@ interface I18nProviderProps {
 
 export function I18nProvider({ children }: I18nProviderProps) {
   useEffect(() => {
-    // Initialize i18n on client side
-    import('@/lib/i18n');
+    // Load language from localStorage after hydration
+    const storedLang = localStorage.getItem('i18nextLng') || 'en';
+    if (storedLang !== i18n.language) {
+      i18n.changeLanguage(storedLang);
+    }
   }, []);
 
   return <>{children}</>;

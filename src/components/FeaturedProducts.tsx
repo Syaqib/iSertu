@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 
 export default function FeaturedProducts() {
   const { t } = useTranslation();
-  // Take first 6 products for featured section
-  const featuredProducts = products.slice(0, 6);
+  // Show all products in featured section
+  const featuredProducts = products;
 
   return (
     <section id="products" className="py-16 bg-gray-50">
