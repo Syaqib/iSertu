@@ -259,7 +259,7 @@ export default function Navbar() {
                       >
                         <div className="h-24 w-32 rounded-lg mb-3 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200" style={{ backgroundColor: '#838010' }}>
                           <img
-                            src="/images/vlsuper_label.png"
+                            src="/images/vlsuper_label.jpg"
                             alt="VLSuper Label"
                             className="h-16 w-auto object-contain"
                           />
