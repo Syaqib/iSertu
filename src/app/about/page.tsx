@@ -19,33 +19,33 @@ export default function AboutPage() {
         <div className="bg-white rounded-2xl p-16 shadow-sm border border-gray-100">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-light text-gray-900 mb-8 text-center">
-              About Our Mission
+              {t('pages.aboutUs.title')}
             </h2>
             
             <p className="text-lg text-gray-600 leading-relaxed mb-8 text-center">
-              We are a <strong className="text-gray-900">Malaysian-based team</strong> dedicated to delivering innovative hygiene and wellness solutions powered by <strong className="text-gray-900">clay water enzyme technology</strong>. Rooted in science and nature, we develop multipurpose products that are gentle, safe for all, and aligned with modern sustainable lifestyles. Our flagship brands include <strong className="text-gray-900">VLSkin</strong> and <strong className="text-gray-900">VLSuper</strong> — serving homes, communities, and industries.
+              {t('pages.aboutUs.description')}
             </p>
 
             <div className="bg-blue-50 rounded-xl p-8 mb-12">
               <p className="text-lg text-gray-700 text-center italic">
-                &quot;We believe purity shouldn&apos;t come at the cost of health or the environment. That&apos;s why we go back to the earth — and forward with technology.&quot;
+                &quot;{t('pages.aboutUs.philosophy')}&quot;
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Vision */}
               <div className="text-center">
-                <h3 className="text-xl font-medium text-gray-900 mb-4">Vision</h3>
+                <h3 className="text-xl font-medium text-gray-900 mb-4">{t('pages.aboutUs.vision.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  To be a global pioneer in clay-based and enzyme-driven innovations for hygiene, wellness, and sustainable living.
+                  {t('pages.aboutUs.vision.description')}
                 </p>
               </div>
 
               {/* Mission */}
               <div className="text-center">
-                <h3 className="text-xl font-medium text-gray-900 mb-4">Mission</h3>
+                <h3 className="text-xl font-medium text-gray-900 mb-4">{t('pages.aboutUs.mission.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  To harness the natural power of clay and enzyme technology, creating safe, effective, and environmentally friendly products that promote Halal-conscious and sustainable lifestyles for the wellbeing of people, pets, and the planet.
+                  {t('pages.aboutUs.mission.description')}
                 </p>
               </div>
             </div>
@@ -53,9 +53,9 @@ export default function AboutPage() {
             {/* Mission Statement */}
             <div className="mt-12 text-center">
               <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 text-white">
-                <h3 className="text-xl font-medium mb-4">Our Mission Statement</h3>
+                <h3 className="text-xl font-medium mb-4">{t('pages.aboutUs.missionStatement.title')}</h3>
                 <p className="text-lg italic">
-                  &quot;To provide natural purity in every drop, rooted in tradition and enhanced by science.&quot;
+                  &quot;{t('pages.aboutUs.missionStatement.quote')}&quot;
                 </p>
               </div>
             </div>

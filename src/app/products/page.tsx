@@ -22,10 +22,10 @@ export default function ProductsPage() {
         <div className="max-w-4xl mx-auto mb-20">
           <div className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100">
             <h2 className="text-2xl font-light text-gray-900 mb-8 text-center">
-              Where Nature Meets Innovation — And Wellness Begins
+              {t('pages.products.subtitle')}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed text-center">
-              In a world filled with synthetic solutions, we choose to return to the earth — to rediscover the cleansing power of natural clay, enhanced by science. At the heart of every product is <strong className="text-gray-900">Clay Water Enzyme</strong> technology, extracted through a refined process that unlocks natural antibacterial, detoxifying, and purifying properties. This isn&apos;t just about cleanliness — it&apos;s about restoring balance to skin, surfaces, and the way we live. Free from harsh chemicals, every formulation is designed to be safe for daily use, effective in cleansing, and friendly to both humans and the environment. From body washes to multipurpose cleaners, our range is crafted with purpose: <strong className="text-blue-600">to care, to cleanse, to protect</strong> — delivering natural purity, powered by nature, perfected by innovation.
+              {t('pages.products.description')}
             </p>
           </div>
         </div>

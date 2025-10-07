@@ -158,5 +158,40 @@
       }
     ],
     "conclusion": "With CWE, we aim to deliver hygiene solutions that are cleaner, safer, and more blessed."
+  },
+  "pages": {
+    "ourStory": {
+      "title": "Our Journey",
+      "subtitle": "From humble beginnings, our journey began with a simple question:",
+      "question": "Can nature cleanse as powerfully as it heals?",
+      "discovery": "Driven by this curiosity, we discovered the remarkable properties of",
+      "technology": "clay water enzyme technology",
+      "effects": "— a natural formulation with powerful cleansing, antibacterial, and purifying effects. What started as an idea became a mission: to create safe, effective, and environmentally respectful products for everyday life.",
+      "journey": "From the first batch of clay water to a full range of multipurpose cleaners, body care, and surface solutions — our story is one of",
+      "values": "science, sustainability, and sincerity",
+      "belief": "We believe in purity without compromise — in going back to the earth, and forward with purpose."
+    },
+    "aboutUs": {
+      "title": "About Our Mission",
+      "description": "We are a Malaysian-based team dedicated to delivering innovative hygiene and wellness solutions powered by clay water enzyme technology. Rooted in science and nature, we develop multipurpose products that are gentle, safe for all, and aligned with modern sustainable lifestyles. Our flagship brands include VLSkin and VLSuper — serving homes, communities, and industries.",
+      "philosophy": "We believe purity shouldn't come at the cost of health or the environment. That's why we go back to the earth — and forward with technology.",
+      "vision": {
+        "title": "Vision",
+        "description": "To be a global pioneer in clay-based and enzyme-driven innovations for hygiene, wellness, and sustainable living."
+      },
+      "mission": {
+        "title": "Mission",
+        "description": "To harness the natural power of clay and enzyme technology, creating safe, effective, and environmentally friendly products that promote Halal-conscious and sustainable lifestyles for the wellbeing of people, pets, and the planet."
+      },
+      "missionStatement": {
+        "title": "Our Mission Statement",
+        "quote": "To provide natural purity in every drop, rooted in tradition and enhanced by science."
+      }
+    },
+    "products": {
+      "title": "Products",
+      "subtitle": "Where Nature Meets Innovation — And Wellness Begins",
+      "description": "In a world filled with synthetic solutions, we choose to return to the earth — to rediscover the cleansing power of natural clay, enhanced by science. At the heart of every product is Clay Water Enzyme technology, extracted through a refined process that unlocks natural antibacterial, detoxifying, and purifying properties. This isn't just about cleanliness — it's about restoring balance to skin, surfaces, and the way we live. Free from harsh chemicals, every formulation is designed to be safe for daily use, effective in cleansing, and friendly to both humans and the environment. From body washes to multipurpose cleaners, our range is crafted with purpose: to care, to cleanse, to protect — delivering natural purity, powered by nature, perfected by innovation."
+    }
   }
 }
