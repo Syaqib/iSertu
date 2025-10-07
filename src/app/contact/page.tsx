@@ -43,7 +43,31 @@ export default function ContactPage() {
                 <div className="space-y-3">
                   <div>
                     <p className="text-gray-600">
-                      <span className="font-medium text-gray-900">Company:</span> Seven Value Solution
+                      <span className="font-medium text-gray-900">Company:</span><br />
+                      Seven Value Solution
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-gray-600">
+                      <span className="font-medium text-gray-900">Address:</span><br />
+                      B-01-09, Savanna Lifestyle Retail,<br />
+                      Jalan BBL 2, Southville City,<br />
+                      43800 Dengkil, Selangor, MALAYSIA
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Manufactured by Section */}
+              <div className="text-center">
+                <h3 className="text-xl font-medium text-gray-900 mb-4">
+                  Manufactured by
+                </h3>
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-gray-600">
+                      <span className="font-medium text-gray-900">Company:</span><br />
+                      Vital Life Solution Sdn Bhd
                     </p>
                   </div>
                   <div>
