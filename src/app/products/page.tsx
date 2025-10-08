@@ -9,29 +9,39 @@ export default function ProductsPage() {
   
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6 py-20">
-            {/* Header */}
-            <div className="text-center mb-20">
-              <h1 className="text-4xl font-light text-gray-900 mb-6">
-                {t('navbar.products')}
-              </h1>
-              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-            </div>
+      {/* Hero Header Section */}
+      <div className="relative h-[328px] overflow-hidden">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0">
+          <img
+            src="/images/product_page.png"
+            alt="Products Background"
+            className="w-full h-full object-cover object-center brightness-90"
+          />
+          {/* Subtle gradient overlay instead of dark black */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/10"></div>
+        </div>
 
-        {/* Introduction - Single Clean Paragraph */}
-        <div className="max-w-4xl mx-auto mb-20">
-          <div className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-light text-gray-900 mb-8 text-center">
-              {t('pages.products.subtitle')}
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed text-center">
-              {t('pages.products.description')}
-            </p>
+        {/* Foreground content */}
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="text-center text-white drop-shadow-md">
+            <h1 className="text-5xl font-bold mb-4">
+              {t("pages.products.title")}
+            </h1>
           </div>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        {/* Introduction Paragraph */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <p className="text-lg text-gray-700 leading-relaxed text-center">
+            {t('pages.products.description')}
+          </p>
         </div>
 
         {/* Products Grid - Clean Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

@@ -120,18 +120,61 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 relative">
-          {/* Logo */}
-          <Link 
-            href="/" 
-            className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
-          >
-            <img
-              src="/images/VLSme-Logo.png"
-              alt="VLSme Logo"
-              className="h-10 w-auto"
-            />
-          </Link>
+        <div className="flex justify-between items-center h-14 relative">
+          {/* Logo and Language Toggle */}
+          <div className="flex items-center space-x-4">
+            <Link 
+              href="/" 
+              className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
+            >
+              <img
+                src="/images/VLSme-Logo.png"
+                alt="VLSme Logo"
+                className="h-10 w-auto"
+              />
+            </Link>
+
+            {/* Desktop Language Toggle - Left side */}
+            <div className="hidden md:flex items-center">
+              <div className="relative" ref={languageRef}>
+                <button
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+                >
+                  {i18n.language === 'en' ? 'EN' : 'BM'}
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${isLanguageOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isLanguageOpen && (
+                  <div className="absolute top-full left-0 mt-1 w-20 dropdown-menu z-50 dropdown-enter">
+                    <button
+                      onClick={() => handleLanguageChange('en')}
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 first:rounded-t-lg ${
+                        i18n.language === 'en' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                      }`}
+                    >
+                      EN
+                    </button>
+                    <button
+                      onClick={() => handleLanguageChange('bm')}
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 last:rounded-b-lg ${
+                        i18n.language === 'bm' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                      }`}
+                    >
+                      BM
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
 
           {/* Mobile Language Toggle - Visible on top navbar (right side) */}
           <div className="md:hidden flex items-center">
@@ -183,51 +226,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Desktop Navigation - Centered */}
+          {/* Desktop Navigation - Centered with different spacing for EN/BM */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
-            <div className="flex items-baseline space-x-4">
-              {/* Language Toggle */}
-              <div className="relative" ref={languageRef}>
-                <button
-                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                  className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
-                >
-                  {i18n.language === 'en' ? 'EN' : 'BM'}
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-200 ${isLanguageOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                
-                {isLanguageOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-20 dropdown-menu z-50 dropdown-enter">
-                    <button
-                      onClick={() => handleLanguageChange('en')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 first:rounded-t-lg ${
-                        i18n.language === 'en' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
-                      }`}
-                    >
-                      EN
-                    </button>
-                    <button
-                      onClick={() => handleLanguageChange('bm')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 last:rounded-b-lg ${
-                        i18n.language === 'bm' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
-                      }`}
-                    >
-                      BM
-                    </button>
-                  </div>
-                )}
-              </div>
-              
+            <div className={`flex items-center whitespace-nowrap ${i18n.language === 'bm' ? 'space-x-4' : 'space-x-3'}`}>
               <button
                 onClick={handleProductsClick}
-                className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.products')}
               </button>
@@ -236,7 +240,7 @@ export default function Navbar() {
               <div className="relative" ref={brandsRef}>
                 <button
                   onClick={() => setIsBrandsOpen(!isBrandsOpen)}
-                  className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+                  className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1 whitespace-nowrap"
                 >
                   {t('navbar.brands')}
                   <svg
@@ -264,8 +268,6 @@ export default function Navbar() {
                             className="h-16 w-auto object-contain"
                           />
                         </div>
-                        <span className="text-sm font-medium text-gray-700 text-center">VLSuper</span>
-                        <span className="text-xs text-gray-500 text-center">Sertu & Sanitizer</span>
                       </button>
 
                       {/* VLSkin */}
@@ -280,8 +282,6 @@ export default function Navbar() {
                             className="h-16 w-auto object-contain"
                           />
                         </div>
-                        <span className="text-sm font-medium text-gray-700 text-center">VLSkin</span>
-                        <span className="text-xs text-gray-500 text-center">Soap Bar & Bodywash</span>
                       </button>
                     </div>
                   </div>
@@ -289,25 +289,38 @@ export default function Navbar() {
               </div>
               
               <Link
-                href="/about"
-                className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200"
+                href="/our-technology"
+                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
-                {t('navbar.about')}
+                {t('navbar.ourTechnology')}
+              </Link>
+              <Link
+                href="/our-clay"
+                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+              >
+                {t('navbar.ourClay')}
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+              >
+                {t('navbar.aboutVLS')}
               </Link>
               <Link
                 href="/our-story"
-                className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.ourStory')}
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.contact')}
               </Link>
             </div>
           </div>
+
 
           {/* Right side spacer for balance */}
           <div className="hidden md:block w-24"></div>
@@ -340,15 +353,15 @@ export default function Navbar() {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden w-full animate-in slide-in-from-top-2 duration-300">
-              <div className="w-full px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200 rounded-b-lg shadow-lg">
+            <div className="md:hidden fixed left-0 right-0 top-14 animate-in slide-in-from-top-2 duration-300 z-40">
+              <div className="w-full pt-0.5 pb-1 space-y-0.5 bg-white shadow-lg">
               
               <button
                 onClick={() => {
                   handleProductsClick();
                   setIsMenuOpen(false);
                 }}
-                className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left"
+                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium w-full text-left"
               >
                 {t('navbar.products')}
               </button>
@@ -372,8 +385,6 @@ export default function Navbar() {
                           className="h-12 w-auto object-contain"
                         />
                       </div>
-                      <span className="text-xs font-medium text-gray-700 text-center">VLSuper</span>
-                      <span className="text-xs text-gray-500 text-center">Sertu & Sanitizer</span>
                     </button>
 
                     {/* VLSkin */}
@@ -391,29 +402,41 @@ export default function Navbar() {
                           className="h-12 w-auto object-contain"
                         />
                       </div>
-                      <span className="text-xs font-medium text-gray-700 text-center">VLSkin</span>
-                      <span className="text-xs text-gray-500 text-center">Soap Bar & Bodywash</span>
                     </button>
                   </div>
                 </div>
               
               <Link
-                href="/about"
-                className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                href="/our-technology"
+                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('navbar.about')}
+                {t('navbar.ourTechnology')}
+              </Link>
+              <Link
+                href="/our-clay"
+                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navbar.ourClay')}
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navbar.aboutVLS')}
               </Link>
               <Link
                 href="/our-story"
-                className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.ourStory')}
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.contact')}

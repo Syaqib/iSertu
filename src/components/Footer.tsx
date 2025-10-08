@@ -11,14 +11,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">iSertu</h3>
+            <h3 className="text-lg font-semibold mb-4">Vital Life Solution</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               {t('footer.description')}
             </p>
             <div className="mt-4">
-              <p className="text-gray-300 text-sm">
-                <span className="font-medium">{t('footer.email')}</span> info@svs.com
-              </p>
               <p className="text-gray-300 text-sm">
                 <span className="font-medium">{t('footer.phone')}</span> +6011 3960 4278
               </p>
@@ -37,7 +34,23 @@ export default function Footer() {
                   href="/products"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >
-                  {t('footer.allProducts')}
+                  {t('navbar.products')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/our-technology"
+                  className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
+                >
+                  {t('navbar.ourTechnology')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/our-clay"
+                  className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
+                >
+                  {t('navbar.ourClay')}
                 </Link>
               </li>
               <li>
@@ -45,7 +58,15 @@ export default function Footer() {
                   href="/about"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >
-                  {t('footer.aboutUs')}
+                  {t('navbar.aboutVLS')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/our-story"
+                  className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
+                >
+                  {t('navbar.ourStory')}
                 </Link>
               </li>
               <li>
@@ -53,7 +74,7 @@ export default function Footer() {
                   href="/contact"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >
-                  {t('footer.contact')}
+                  {t('navbar.contact')}
                 </Link>
               </li>
             </ul>
@@ -67,7 +88,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -78,7 +99,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -89,7 +110,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://twitter.com"
+                
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors duration-200"

@@ -19,6 +19,29 @@ export default function ContactPage() {
         {/* Main Content - Single Clean Card */}
         <div className="bg-white rounded-xl p-12 shadow-sm border border-gray-100">
           <div className="max-w-3xl mx-auto">
+            {/* VLS Details Section */}
+            <div className="text-center mb-12 pb-8 border-b border-gray-200">
+              <h2 className="text-2xl font-medium text-gray-900 mb-6">
+                {t('contact.manufacturedBy')}
+              </h2>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-gray-600">
+                    <span className="font-medium text-gray-900">Company:</span><br />
+                    Vital Life Solution Sdn Bhd
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-600">
+                    <span className="font-medium text-gray-900">Address:</span><br />
+                    B-01-09, Savanna Lifestyle Retail,<br />
+                    Jalan BBL 2, Southville City,<br />
+                    43800 Dengkil, Selangor, MALAYSIA
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Trusted Agency Section */}
             <div className="text-center mb-10">
               <h2 className="text-2xl font-medium text-gray-900 mb-6">
@@ -35,10 +58,10 @@ export default function ContactPage() {
 
             {/* Contact Information - Simple Layout */}
             <div className="space-y-8">
-              {/* Company Info */}
+              {/* SVS Contact Details */}
               <div className="text-center">
                 <h3 className="text-xl font-medium text-gray-900 mb-4">
-                  {t('contact.companyInfo')}
+                  {t('contact.contactDetails')}
                 </h3>
                 <div className="space-y-3">
                   <div>
@@ -55,44 +78,14 @@ export default function ContactPage() {
                       43800 Dengkil, Selangor, MALAYSIA
                     </p>
                   </div>
-                </div>
-              </div>
-
-              {/* Manufactured by Section */}
-              <div className="text-center">
-                <h3 className="text-xl font-medium text-gray-900 mb-4">
-                  Manufactured by
-                </h3>
-                <div className="space-y-3">
-                  <div>
+                  <div className="space-y-2">
                     <p className="text-gray-600">
-                      <span className="font-medium text-gray-900">Company:</span><br />
-                      Vital Life Solution Sdn Bhd
+                      <span className="font-medium text-gray-900">Phone:</span> +6011 3960 4278
+                    </p>
+                    <p className="text-gray-600">
+                      <span className="font-medium text-gray-900">Phone:</span> +6017 358 4920
                     </p>
                   </div>
-                  <div>
-                    <p className="text-gray-600">
-                      <span className="font-medium text-gray-900">Address:</span><br />
-                      B-01-09, Savanna Lifestyle Retail,<br />
-                      Jalan BBL 2, Southville City,<br />
-                      43800 Dengkil, Selangor, MALAYSIA
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Contact Details */}
-              <div className="text-center">
-                <h3 className="text-xl font-medium text-gray-900 mb-4">
-                  {t('contact.contactDetails')}
-                </h3>
-                <div className="space-y-2">
-                  <p className="text-gray-600">
-                    <span className="font-medium text-gray-900">Phone:</span> +6011 3960 4278
-                  </p>
-                  <p className="text-gray-600">
-                    <span className="font-medium text-gray-900">Phone:</span> +6017 358 4920
-                  </p>
                 </div>
               </div>
 

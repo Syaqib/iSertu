@@ -2,7 +2,9 @@
   "navbar": {
     "products": "Products",
     "brands": "Brands",
-    "about": "About Us",
+    "ourTechnology": "Our Technology",
+    "ourClay": "Our Clay",
+    "aboutVLS": "About VLS",
     "ourStory": "Our Story",
     "contact": "Contact Us",
     "checkout": "Checkout",
@@ -127,6 +129,7 @@
   "contact": {
     "title": "Contact Us",
     "subtitle": "Get in touch with us for any inquiries or support",
+    "manufacturedBy": "Manufactured by",
     "trustedAgency": "Trusted Sales & Marketing Agency",
     "companyInfo": "Company Information",
     "companyName": "Company Name",
@@ -192,6 +195,28 @@
       "title": "Products",
       "subtitle": "Where Nature Meets Innovation — And Wellness Begins",
       "description": "In a world filled with synthetic solutions, we choose to return to the earth — to rediscover the cleansing power of natural clay, enhanced by science. At the heart of every product is Clay Water Enzyme technology, extracted through a refined process that unlocks natural antibacterial, detoxifying, and purifying properties. This isn't just about cleanliness — it's about restoring balance to skin, surfaces, and the way we live. Free from harsh chemicals, every formulation is designed to be safe for daily use, effective in cleansing, and friendly to both humans and the environment. From body washes to multipurpose cleaners, our range is crafted with purpose: to care, to cleanse, to protect — delivering natural purity, powered by nature, perfected by innovation."
+    },
+    "ourClay": {
+      "title": "Natural Purity in Every Drop",
+      "subtitle": "Purity drawn from the earth, refined by science — gentle, safe, and powerful for everyday life.",
+      "sections": [
+        {
+          "title": "The Purity Beneath. The Power Within.",
+          "text": "Beneath every surface we cleanse lies a story — of earth, water, and transformation. Our clay originates from naturally rich kaolin deposits, refined through Clay Water Enzyme Technology. From raw mineral to perfected formula, every drop carries the essence of natural purity — gentle, safe, and effective for daily use."
+        },
+        {
+          "title": "The History of Kaolin",
+          "text": "Kaolin, or white clay, was first discovered in China around 300 BC. Treasured for centuries in porcelain and medicine, it later transformed industries worldwide — from ceramics to skincare — admired for its purity and natural cleansing power."
+        },
+        {
+          "title": "Where Nature Meets Innovation",
+          "text": "Our process uses advanced nanotechnology to extract the Clay Water Enzyme directly from kaolin — producing a powerful yet gentle base that purifies, protects, and revitalizes both skin and surfaces."
+        },
+        {
+          "title": "Purity You Can Feel",
+          "text": "Each product is powered by the same principle — purity through simplicity. No harsh chemicals. No unnecessary additives. Just clean innovation born from clay, water, and science."
+        }
+      ]
     }
   }
 }

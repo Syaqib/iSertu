@@ -10,7 +10,7 @@ export default function AboutPage() {
             {/* Header */}
             <div className="text-center mb-20">
               <h1 className="text-4xl font-light text-gray-900 mb-6">
-                {t('navbar.about')}
+                {t('navbar.aboutVLS')}
               </h1>
               <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
