@@ -6,12 +6,14 @@ interface ProductGalleryProps {
 
 export default function ProductGallery({ image }: ProductGalleryProps) {
   return (
-    <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+    <div className="aspect-square rounded-lg overflow-hidden relative">
       <Image
         src={image}
         alt="Product Image"
         fill
-        className="object-contain"
+        className="object-contain p-4"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        priority
       />
       <div className="w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center hidden">
         <div className="text-center">

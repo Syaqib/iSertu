@@ -14,12 +14,13 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
       {/* Product Image */}
-      <div className="aspect-square bg-gray-100 relative overflow-hidden">
+      <div className="aspect-square relative overflow-hidden">
         <Image
           src={product.image}
           alt={product.name}
           fill
-          className="object-contain"
+          className="object-contain p-2"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center hidden">
           <div className="text-gray-400 text-sm font-medium">{t('products.productImage')}</div>
