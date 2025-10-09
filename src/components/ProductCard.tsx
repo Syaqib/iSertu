@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Product } from "@/lib/products";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 interface ProductCardProps {
   product: Product;
@@ -14,15 +15,11 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
       {/* Product Image */}
       <div className="aspect-square bg-gray-100 relative overflow-hidden">
-        <img
+        <Image
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-contain"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-            target.nextElementSibling?.classList.remove('hidden');
-          }}
+          fill
+          className="object-contain"
         />
         <div className="w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center hidden">
           <div className="text-gray-400 text-sm font-medium">{t('products.productImage')}</div>

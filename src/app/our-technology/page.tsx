@@ -31,7 +31,7 @@ export default function OurTechnologyPage() {
 
             {/* Benefits Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              {t('clayWaterEnzyme.benefits', { returnObjects: true }).map((benefit: { title: string; description: string }, index: number) => (
+              {(t('clayWaterEnzyme.benefits', { returnObjects: true }) as Array<{ title: string; description: string }>).map((benefit, index) => (
                 <div
                   key={index}
                   className="bg-blue-50 rounded-xl p-8 shadow-sm border border-blue-100 hover:shadow-md transition-shadow duration-300"

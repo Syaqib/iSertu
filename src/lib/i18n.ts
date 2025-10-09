@@ -14,17 +14,22 @@ const resources = {
 };
 
 // Initialize i18n without LanguageDetector to prevent hydration mismatches
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: 'en', // Always start with English to prevent hydration mismatch
-    fallbackLng: 'en',
-    debug: false,
-    interpolation: {
-      escapeValue: false,
-    },
-  });
+if (!i18n.isInitialized) {
+  i18n
+    .use(initReactI18next)
+    .init({
+      resources,
+      lng: 'en', // Always start with English to prevent hydration mismatch
+      fallbackLng: 'en',
+      debug: false,
+      interpolation: {
+        escapeValue: false,
+      },
+      react: {
+        useSuspense: false,
+      },
+    });
+}
 
 export default i18n;
 
