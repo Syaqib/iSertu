@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
@@ -84,9 +85,11 @@ export default function Navbar() {
               href="/" 
               className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
             >
-              <img
+              <Image
                 src="/images/VLSme-Logo.png"
                 alt="VLSme Logo"
+                width={40}
+                height={40}
                 className="h-10 w-auto"
               />
             </Link>
@@ -127,9 +130,11 @@ export default function Navbar() {
               href="/" 
               className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
             >
-              <img
+              <Image
                 src="/images/VLSme-Logo.png"
                 alt="VLSme Logo"
+                width={40}
+                height={40}
                 className="h-10 w-auto"
               />
             </Link>
@@ -262,9 +267,11 @@ export default function Navbar() {
                         className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
                       >
                         <div className="h-24 w-32 rounded-lg mb-3 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200" style={{ backgroundColor: '#838010' }}>
-                          <img
+                          <Image
                             src="/images/vlsuper_label.jpg"
                             alt="VLSuper Label"
+                            width={64}
+                            height={64}
                             className="h-16 w-auto object-contain"
                           />
                         </div>
@@ -276,9 +283,11 @@ export default function Navbar() {
                         className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
                       >
                         <div className="h-24 w-32 rounded-lg mb-3 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200" style={{ backgroundColor: '#F4DFD8' }}>
-                          <img
+                          <Image
                             src="/images/vlskin_label.jpg"
                             alt="VLSkin Label"
+                            width={64}
+                            height={64}
                             className="h-16 w-auto object-contain"
                           />
                         </div>
@@ -379,9 +388,11 @@ export default function Navbar() {
                       className="flex flex-col items-center p-3 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
                     >
                       <div className="h-16 w-24 rounded-lg mb-2 flex items-center justify-center shadow-sm" style={{ backgroundColor: '#838010' }}>
-                        <img
+                        <Image
                           src="/images/vlsuper_label.png"
                           alt="VLSuper Label"
+                          width={48}
+                          height={48}
                           className="h-12 w-auto object-contain"
                         />
                       </div>
@@ -396,9 +407,11 @@ export default function Navbar() {
                       className="flex flex-col items-center p-3 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
                     >
                       <div className="h-16 w-24 rounded-lg mb-2 flex items-center justify-center shadow-sm" style={{ backgroundColor: '#F4DFD8' }}>
-                        <img
+                        <Image
                           src="/images/vlskin_label.jpg"
                           alt="VLSkin Label"
+                          width={48}
+                          height={48}
                           className="h-12 w-auto object-contain"
                         />
                       </div>

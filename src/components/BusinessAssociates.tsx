@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 export default function BusinessAssociates() {
   const { t } = useTranslation();
@@ -57,19 +58,16 @@ export default function BusinessAssociates() {
                         className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
                       >
                         <div className="w-32 h-20 flex items-center justify-center overflow-hidden mb-3">
-                          <img
+                          <Image
                             src={logo.logo}
                             alt={logo.alt}
+                            width={128}
+                            height={80}
                             className={`max-w-full max-h-full object-contain ${
                               logo.name === 'MIS' || logo.name === 'SVS' 
                                 ? 'scale-200' 
                                 : ''
                             }`}
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.style.display = 'none';
-                              target.nextElementSibling?.classList.remove('hidden');
-                            }}
                           />
                           <div className="hidden text-4xl text-gray-400">
                             🏢

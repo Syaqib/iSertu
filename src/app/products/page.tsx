@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/lib/products";
 
@@ -13,10 +14,12 @@ export default function ProductsPage() {
       <div className="relative h-[328px] overflow-hidden">
         {/* Background Image Layer */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/product_page.png"
             alt="Products Background"
-            className="w-full h-full object-cover object-center brightness-90"
+            fill
+            className="object-cover object-center brightness-90"
+            priority
           />
           {/* Subtle gradient overlay instead of dark black */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/10"></div>

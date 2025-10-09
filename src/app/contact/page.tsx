@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 export default function ContactPage() {
   const { t } = useTranslation();
@@ -48,9 +49,11 @@ export default function ContactPage() {
                 {t('contact.trustedAgency')}
               </h2>
               <div className="flex justify-center mb-8">
-                <img
+                <Image
                   src="/images/SVS_logo.png"
                   alt="SVS Logo"
+                  width={96}
+                  height={96}
                   className="h-24 w-auto object-contain"
                 />
               </div>
