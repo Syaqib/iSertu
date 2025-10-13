@@ -76,15 +76,11 @@ export default function ContactPage() {
                   <div>
                     <p className="text-gray-600">
                       <span className="font-medium text-gray-900">Address:</span><br />
-                      B-01-09, Savanna Lifestyle Retail,<br />
-                      Jalan BBL 2, Southville City,<br />
-                      43800 Dengkil, Selangor, MALAYSIA
+                      184. Jalan Nilai 7/1, Kawasan Perindustrian Nilai 7,<br />
+                      71800 Nilai, Negeri Sembilan Darul Khusus
                     </p>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-gray-600">
-                      <span className="font-medium text-gray-900">Phone:</span> +6011 3960 4278
-                    </p>
                     <p className="text-gray-600">
                       <span className="font-medium text-gray-900">Phone:</span> +6017 358 4920
                     </p>

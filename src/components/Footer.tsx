@@ -11,14 +11,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Vital Life Solution</h3>
+            <h3 className="text-lg font-semibold mb-4">Vital Life Solution Sdn Bhd</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               {t('footer.description')}
             </p>
             <div className="mt-4">
-              <p className="text-gray-300 text-sm">
-                <span className="font-medium">{t('footer.phone')}</span> +6011 3960 4278
-              </p>
               <p className="text-gray-300 text-sm">
                 <span className="font-medium">{t('footer.phone')}</span> +6017 358 4920
               </p>

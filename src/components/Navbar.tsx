@@ -389,7 +389,7 @@ export default function Navbar() {
                     >
                       <div className="h-16 w-24 rounded-lg mb-2 flex items-center justify-center shadow-sm" style={{ backgroundColor: '#838010' }}>
                         <Image
-                          src="/images/vlsuper_label.png"
+                          src="/images/vlsuper_label.jpg"
                           alt="VLSuper Label"
                           width={48}
                           height={48}
