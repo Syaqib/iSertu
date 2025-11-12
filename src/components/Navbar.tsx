@@ -40,7 +40,7 @@ export default function Navbar() {
   const handleBrandClick = (brand: string) => {
     setIsBrandsOpen(false);
     const routes = {
-      'VLSuper': '/products/vlsartu-liquid-clay-1000ml', // Sertu and Sanitizer
+      'VLSuper': '/products/vlsuper-sertu-liquid-clay-500ml', // Sertu and Sanitizer
       'VLSkin': '/products/vlskin-bodywash-500ml' // Soap Bar and Bodywash
     };
     router.push(routes[brand as keyof typeof routes]);
@@ -88,9 +88,9 @@ export default function Navbar() {
               <Image
                 src="/images/VLSme-Logo.png"
                 alt="VLSme Logo"
-                width={40}
-                height={40}
-                className="h-10 w-auto"
+                width={1080}
+                height={1080}
+                className="h-16 w-auto"
               />
             </Link>
 
@@ -133,9 +133,9 @@ export default function Navbar() {
               <Image
                 src="/images/VLSme-Logo.png"
                 alt="VLSme Logo"
-                width={40}
-                height={40}
-                className="h-10 w-auto"
+                width={1080}
+                height={1080}
+                className="h-16 w-auto"
               />
             </Link>
 

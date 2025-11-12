@@ -115,9 +115,17 @@ export default function ProductPage({ params }: ProductPageProps) {
                 {t('products.howToUse')}
               </h2>
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                  {t(`products.${product.slug}.howToUse`)}
-                </p>
+                {Array.isArray(product.howToUse) || Array.isArray(t(`products.${product.slug}.howToUse`, { returnObjects: true })) ? (
+                  <ol className="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+                    {(t(`products.${product.slug}.howToUse`, { returnObjects: true }) as string[]).map((step: string, index: number) => (
+                      <li key={index}>{step}</li>
+                    ))}
+                  </ol>
+                ) : (
+                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                    {t(`products.${product.slug}.howToUse`)}
+                  </p>
+                )}
               </div>
             </div>
           )}

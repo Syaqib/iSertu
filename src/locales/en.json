@@ -55,22 +55,26 @@
       ],
       "howToUse": "Lather onto palm or sponge, apply to skin, then rinse thoroughly."
     },
-    "vlsartu-liquid-clay-1000ml": {
-      "name": "VLSartu Liquid Clay 1000ml",
-      "shortDescription": "Consistent clay mix for sertu cleansing (1000ml)",
-      "longDescription": "VLSartu Liquid Clay provides a consistent and practical solution for sertu cleansing according to Islamic principles. This pre-mixed clay solution eliminates the guesswork in preparing the correct clay mixture for cleansing najis mughallazah. The liquid form ensures even distribution and effective cleansing on various surfaces including metal, plastic, glass, and floors. Available in both household and industrial sizes to meet different needs.",
+    "vlsuper-sertu-liquid-clay-500ml": {
+      "name": "VLSuper Sertu Liquid Clay 500ml",
+      "shortDescription": "Consistent clay mix for sertu cleansing (500ml)",
+      "longDescription": "VLSuper Sertu Liquid Clay provides a consistent and practical solution for sertu cleansing according to Islamic principles. This pre-mixed clay solution eliminates the guesswork in preparing the correct clay mixture for cleansing najis mughallazah. The liquid form ensures even distribution and effective cleansing on various surfaces including metal, plastic, glass, and floors. Available in both household and industrial sizes to meet different needs.",
       "keyBenefits": [
         "Consistent & practical clay mix",
         "Simple solution for sertu cleansing of najis mughallazah",
         "Suitable for metal, plastic, glass & floor surfaces",
         "Available in household & industrial sizes"
       ],
-      "howToUse": "1. Remove physical traces of impurity. 2. Wash once with water mixed with Premix Sertu Solution. 3. Rinse 6 more times with clean water."
+      "howToUse": [
+        "Remove physical traces of impurity",
+        "Wash once with water mixed with Premix Sertu Solution",
+        "Rinse 6 more times with clean water"
+      ]
     },
-    "vlscent-natural-sanitizer-200ml": {
-      "name": "VLScent Natural Sanitizer 200ml",
+    "vlsuper-natural-sanitizer-200ml": {
+      "name": "VLSuper Natural Sanitizer 200ml",
       "shortDescription": "Quick-drying natural sanitizer for hands and surfaces (200ml)",
-      "longDescription": "VLScent Natural Sanitizer offers effective hand and surface sanitization using natural ingredients. This 200ml spray bottle provides quick-drying, non-sticky sanitization that's comfortable for daily use. The compact size makes it perfect for travel, office, or personal use. Formulated with natural ingredients, it provides reliable sanitization without harsh chemicals, making it safe for frequent use by the whole family.",
+      "longDescription": "VLSuper Natural Sanitizer offers effective hand and surface sanitization using natural ingredients. This 200ml spray bottle provides quick-drying, non-sticky sanitization that's comfortable for daily use. The compact size makes it perfect for travel, office, or personal use. Formulated with natural ingredients, it provides reliable sanitization without harsh chemicals, making it safe for frequent use by the whole family.",
       "keyBenefits": [
         "Quick-drying & comfortable",
         "Non-sticky on skin",
@@ -195,6 +199,9 @@
       "title": "Products",
       "subtitle": "Where Nature Meets Innovation — And Wellness Begins",
       "description": "In a world filled with synthetic solutions, we choose to return to the earth — to rediscover the cleansing power of natural clay, enhanced by science. At the heart of every product is Clay Water Enzyme technology, extracted through a refined process that unlocks natural antibacterial, detoxifying, and purifying properties. This isn't just about cleanliness — it's about restoring balance to skin, surfaces, and the way we live. Free from harsh chemicals, every formulation is designed to be safe for daily use, effective in cleansing, and friendly to both humans and the environment. From body washes to multipurpose cleaners, our range is crafted with purpose: to care, to cleanse, to protect — delivering natural purity, powered by nature, perfected by innovation."
+    },
+    "ourTechnology": {
+      "heroTitle": "Innovating Wellness for a Sustainable Future"
     },
     "ourClay": {
       "title": "Natural Purity in Every Drop",

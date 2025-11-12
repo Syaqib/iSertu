@@ -55,22 +55,26 @@
       ],
       "howToUse": "Buihkan pada tapak tangan atau span, sapukan ke kulit, bilas bersih."
     },
-    "vlsartu-liquid-clay-1000ml": {
-      "name": "VLSartu Liquid Clay 1000ml",
-      "shortDescription": "Bancuhan tanah liat konsisten untuk pembersihan sertu (1000ml)",
-      "longDescription": "VLSartu Liquid Clay menyediakan solusi yang konsisten dan praktikal untuk pembersihan sertu mengikut prinsip Islam. Larutan tanah liat pra-campuran ini menghapuskan tekaan dalam menyediakan bancuhan tanah liat yang betul untuk membersihkan najis mughallazah. Bentuk cecair memastikan pengedaran yang sekata dan pembersihan yang berkesan pada pelbagai permukaan termasuk logam, plastik, kaca, dan lantai. Tersedia dalam saiz isi rumah dan industri untuk memenuhi keperluan yang berbeza.",
+    "vlsuper-sertu-liquid-clay-500ml": {
+      "name": "VLSuper Sertu Liquid Clay 500ml",
+      "shortDescription": "Bancuhan tanah liat konsisten untuk pembersihan sertu (500ml)",
+      "longDescription": "VLSuper Sertu Liquid Clay menyediakan solusi yang konsisten dan praktikal untuk pembersihan sertu mengikut prinsip Islam. Larutan tanah liat pra-campuran ini menghapuskan tekaan dalam menyediakan bancuhan tanah liat yang betul untuk membersihkan najis mughallazah. Bentuk cecair memastikan pengedaran yang sekata dan pembersihan yang berkesan pada pelbagai permukaan termasuk logam, plastik, kaca, dan lantai. Tersedia dalam saiz isi rumah dan industri untuk memenuhi keperluan yang berbeza.",
       "keyBenefits": [
         "Bancuhan konsisten & praktikal",
         "Solusi mudah untuk sertu najis mughallazah",
         "Sesuai untuk permukaan logam, plastik, kaca & lantai",
         "Pilihan saiz isi rumah & industri"
       ],
-      "howToUse": "1. Buang kesan fizikal najis. 2. Basuh sekali dengan air bercampur Premix Sertu Solution. 3. Bilas lagi 6 kali menggunakan air biasa."
+      "howToUse": [
+        "Buang kesan fizikal najis",
+        "Basuh sekali dengan air bercampur Premix Sertu Solution",
+        "Bilas lagi 6 kali menggunakan air biasa"
+      ]
     },
-    "vlscent-natural-sanitizer-200ml": {
-      "name": "VLScent Natural Sanitizer 200ml",
+    "vlsuper-natural-sanitizer-200ml": {
+      "name": "VLSuper Natural Sanitizer 200ml",
       "shortDescription": "Sanitizer semula jadi cepat kering untuk tangan dan permukaan (200ml)",
-      "longDescription": "VLScent Natural Sanitizer menawarkan sanitasi tangan dan permukaan yang berkesan menggunakan bahan-bahan semula jadi. Botol sembur 200ml ini memberikan sanitasi cepat kering dan tidak melekit yang selesa untuk kegunaan harian. Saiz kompak menjadikannya sesuai untuk perjalanan, pejabat, atau kegunaan peribadi. Diformulasikan dengan bahan-bahan semula jadi, ia memberikan sanitasi yang boleh dipercayai tanpa bahan kimia keras, menjadikannya selamat untuk kegunaan kerap oleh seluruh keluarga.",
+      "longDescription": "VLSuper Natural Sanitizer menawarkan sanitasi tangan dan permukaan yang berkesan menggunakan bahan-bahan semula jadi. Botol sembur 200ml ini memberikan sanitasi cepat kering dan tidak melekit yang selesa untuk kegunaan harian. Saiz kompak menjadikannya sesuai untuk perjalanan, pejabat, atau kegunaan peribadi. Diformulasikan dengan bahan-bahan semula jadi, ia memberikan sanitasi yang boleh dipercayai tanpa bahan kimia keras, menjadikannya selamat untuk kegunaan kerap oleh seluruh keluarga.",
       "keyBenefits": [
         "Cepat kering & selesa",
         "Tidak melekit di kulit",
@@ -195,6 +199,9 @@
       "title": "Produk",
       "subtitle": "Di Mana Alam Bertemu Inovasi — Dan Kesejahteraan Bermula",
       "description": "Dalam dunia yang penuh dengan penyelesaian sintetik, kami memilih untuk kembali ke bumi — untuk menemui semula kuasa pembersihan tanah liat semula jadi, dipertingkatkan oleh sains. Di jantung setiap produk adalah teknologi Enzim Air Tanah, diekstrak melalui proses yang halus yang membuka kunci sifat antibakteria, detoksifikasi, dan penulenan semula jadi. Ini bukan sekadar tentang kebersihan — ia tentang memulihkan keseimbangan kepada kulit, permukaan, dan cara kita hidup. Bebas dari bahan kimia keras, setiap formulasi direka untuk selamat digunakan harian, berkesan dalam pembersihan, dan mesra kepada manusia dan alam sekitar. Dari pencuci badan hingga pembersih serbaguna, rangkaian kami dicipta dengan tujuan: untuk menjaga, untuk membersihkan, untuk melindungi — menyampaikan kesucian semula jadi, dikuasai oleh alam, disempurnakan oleh inovasi."
+    },
+    "ourTechnology": {
+      "heroTitle": "Menginovasi Kesejahteraan untuk Masa Depan yang Mampan"
     },
     "ourClay": {
       "title": "Kesucian Semula Jadi dalam Setiap Titisan",

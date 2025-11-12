@@ -48,13 +48,13 @@ export default function ContactPage() {
               <h2 className="text-2xl font-medium text-gray-900 mb-6">
                 {t('contact.trustedAgency')}
               </h2>
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-6">
                 <Image
                   src="/images/SVS_logo.png"
                   alt="SVS Logo"
-                  width={96}
-                  height={96}
-                  className="h-24 w-auto object-contain"
+                  width={835}
+                  height={857}
+                  className="h-32 w-auto object-contain"
                 />
               </div>
             </div>
