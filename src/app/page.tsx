@@ -29,7 +29,7 @@ export default function Home() {
         {/* Foreground content */}
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center text-white drop-shadow-md">
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-4xl font-bold">
               {t("pages.ourTechnology.heroTitle")}
             </h1>
           </div>

@@ -4,7 +4,12 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  showButtons?: boolean;
+  height?: string;
+}
+
+export default function Hero({ showButtons = true, height = "auto" }: HeroProps) {
   const { t, i18n } = useTranslation();
   const [isReady, setIsReady] = useState(false);
 
@@ -22,62 +27,66 @@ export default function Hero() {
   // Show loading state until i18n is ready
   if (!isReady) {
     return (
-      <section style={{ backgroundColor: '#f0e7d3' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <section style={{ backgroundColor: '#f0e7d3', height: height === "auto" ? "auto" : height }}>
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${height === "auto" ? "py-24 lg:py-32" : "h-full flex items-center justify-center"}`}>
           <div className="text-center">
             <div className="h-16 rounded-lg mb-6 mx-auto max-w-md animate-pulse" style={{ backgroundColor: '#694900' }}></div>
             <div className="h-6 rounded-lg mb-8 mx-auto max-w-2xl animate-pulse" style={{ backgroundColor: '#694900' }}></div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="h-12 bg-white rounded-lg w-32 animate-pulse"></div>
-              <div className="h-12 rounded-lg w-32 animate-pulse" style={{ backgroundColor: '#694900' }}></div>
-            </div>
+            {showButtons && (
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="h-12 bg-white rounded-lg w-32 animate-pulse"></div>
+                <div className="h-12 rounded-lg w-32 animate-pulse" style={{ backgroundColor: '#694900' }}></div>
+              </div>
+            )}
           </div>
         </div>
       </section>
     );
   }
   return (
-    <section style={{ backgroundColor: '#f0e7d3' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <section style={{ backgroundColor: '#f0e7d3', height: height === "auto" ? "auto" : height }}>
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${height === "auto" ? "py-24 lg:py-32" : "h-full flex items-center justify-center"}`}>
         <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#694900' }}>
+          <h1 className={`${height === "auto" ? "text-4xl sm:text-5xl lg:text-6xl" : "text-4xl"} font-bold ${height === "auto" ? "mb-6" : ""} leading-tight`} style={{ color: '#694900' }}>
             {t('hero.title')}
             {t('hero.subtitle') && <span className="block">{t('hero.subtitle')}</span>}
           </h1>
-          <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-justify" style={{ color: '#694900' }}>
+          <p className={`${height === "auto" ? "text-xl sm:text-2xl mb-8" : "text-lg mt-4"} max-w-3xl mx-auto leading-relaxed text-justify`} style={{ color: '#694900' }}>
             {t('hero.description')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/products"
-              className="bg-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 shadow-lg"
-              style={{ color: '#694900' }}
-              aria-label="Explore our products and start your wellness journey"
-            >
-              {t('hero.shopNow')}
-            </Link>
-            <Link
-              href="/about"
-              className="border-2 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
-              style={{ 
-                borderColor: '#694900',
-                color: '#694900',
-                '--hover-bg': '#694900',
-                '--hover-text': '#f0e7d3'
-              } as React.CSSProperties & { '--hover-bg': string; '--hover-text': string }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#694900';
-                e.currentTarget.style.color = '#f0e7d3';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = '#694900';
-              }}
-              aria-label="Learn more about our company and mission"
-            >
-              {t('hero.learnMore')}
-            </Link>
-          </div>
+          {showButtons && (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/products"
+                className="bg-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 shadow-lg"
+                style={{ color: '#694900' }}
+                aria-label="Explore our products and start your wellness journey"
+              >
+                {t('hero.shopNow')}
+              </Link>
+              <Link
+                href="/about"
+                className="border-2 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                style={{ 
+                  borderColor: '#694900',
+                  color: '#694900',
+                  '--hover-bg': '#694900',
+                  '--hover-text': '#f0e7d3'
+                } as React.CSSProperties & { '--hover-bg': string; '--hover-text': string }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#694900';
+                  e.currentTarget.style.color = '#f0e7d3';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = '#694900';
+                }}
+                aria-label="Learn more about our company and mission"
+              >
+                {t('hero.learnMore')}
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import FeaturedProducts from "@/components/FeaturedProducts";
 
 export default function OurClayPage() {
   const { t } = useTranslation();
@@ -15,14 +16,16 @@ export default function OurClayPage() {
   return (
     <div className="bg-white">
       {/* Page intro */}
-      <div className="py-20 text-center max-w-3xl mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-4 text-gray-900">
-          {t('pages.ourClay.title')}
-        </h1>
-        <p className="text-lg text-gray-600 text-justify">
-          {t('pages.ourClay.subtitle')}
-        </p>
-      </div>
+      <section className="h-[328px] flex items-center justify-center" style={{ backgroundColor: '#f0e7d3' }}>
+        <div className="text-center max-w-3xl mx-auto px-4">
+          <h1 className="text-4xl font-bold" style={{ color: '#694900' }}>
+            {t('pages.ourClay.title')}
+          </h1>
+          <p className="text-lg text-justify mt-4" style={{ color: '#694900' }}>
+            {t('pages.ourClay.subtitle')}
+          </p>
+        </div>
+      </section>
 
        {/* Dynamic sections */}
        {sections.map((s, index) => (
@@ -57,6 +60,9 @@ export default function OurClayPage() {
            </motion.div>
          </section>
        ))}
+      
+      {/* Featured Products Section */}
+      <FeaturedProducts />
     </div>
   );
 }

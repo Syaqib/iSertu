@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 export default function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="text-white border-t" style={{ backgroundColor: '#755a1a' }}>
+    <footer className="text-white border-t" style={{ backgroundColor: '#a69672' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -123,7 +123,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-300 text-sm">
             {t('footer.copyright')}
           </p>
         </div>

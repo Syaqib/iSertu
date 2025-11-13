@@ -86,7 +86,7 @@ export default function Navbar() {
                 alt="VLSme Logo"
                 width={1080}
                 height={1080}
-                className="h-16 w-auto"
+                className="h-24 w-auto"
               />
             </Link>
 
@@ -131,7 +131,7 @@ export default function Navbar() {
                 alt="VLSme Logo"
                 width={1080}
                 height={1080}
-                className="h-16 w-auto"
+                className="h-24 w-auto"
               />
             </Link>
 
