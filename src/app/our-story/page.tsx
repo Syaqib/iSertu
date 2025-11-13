@@ -13,7 +13,7 @@ export default function OurStoryPage() {
               <h1 className="text-4xl font-light text-gray-900 mb-6">
                 {t('navbar.ourStory')}
               </h1>
-              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+              <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#694900' }}></div>
             </div>
 
         {/* Our Story Content - Clean Single Card */}
@@ -23,19 +23,19 @@ export default function OurStoryPage() {
               {t('pages.ourStory.title')}
             </h2>
             
-            <p className="text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
-              {t('pages.ourStory.subtitle')} <em className="text-blue-600">{t('pages.ourStory.question')}</em>
+            <p className="text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 text-justify">
+              {t('pages.ourStory.subtitle')} <em style={{ color: '#694900' }}>{t('pages.ourStory.question')}</em>
             </p>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
+            <p className="text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 text-justify">
               {t('pages.ourStory.discovery')} <strong className="text-gray-900">{t('pages.ourStory.technology')}</strong> {t('pages.ourStory.effects')}
             </p>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
+            <p className="text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 text-justify">
               {t('pages.ourStory.journey')} <strong className="text-gray-900">{t('pages.ourStory.values')}</strong>.
             </p>
 
-            <div className="bg-blue-50 rounded-xl p-6 md:p-8">
+            <div className="rounded-xl p-6 md:p-8" style={{ backgroundColor: '#f0e7d3' }}>
               <p className="text-lg text-gray-700 italic">
                 &quot;{t('pages.ourStory.belief')}&quot;
               </p>

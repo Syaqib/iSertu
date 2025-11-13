@@ -43,18 +43,22 @@ export default function ProductPage({ params }: ProductPageProps) {
       <nav className="mb-8">
         <ol className="flex items-center space-x-2 text-sm text-gray-500">
           <li>
-            <Link href="/" className="hover:text-blue-600 transition-colors duration-200">
+            <Link href="/" className="transition-colors duration-200" style={{ '--hover-color': '#694900' } as React.CSSProperties & { '--hover-color': string }} onMouseEnter={(e) => { e.currentTarget.style.color = '#694900'; }} onMouseLeave={(e) => { e.currentTarget.style.color = ''; }}>
               {t('products.home')}
             </Link>
           </li>
           <li>/</li>
           <li>
-            <Link href="/products" className="hover:text-blue-600 transition-colors duration-200">
+            <Link href="/products" className="transition-colors duration-200" onMouseEnter={(e) => { e.currentTarget.style.color = '#694900'; }} onMouseLeave={(e) => { e.currentTarget.style.color = ''; }}>
               {t('products.breadcrumb')}
             </Link>
           </li>
           <li>/</li>
-          <li className="text-gray-900 font-medium">{product.name}</li>
+          <li className="text-gray-900 font-medium">
+            <span className="font-bold">{t(`products.${product.slug}.name`).substring(0, 2)}</span>
+            {t(`products.${product.slug}.name`).substring(2)}
+            {t(`products.${product.slug}.nameSubtitle`) && ` ${t(`products.${product.slug}.nameSubtitle`)}`}
+          </li>
         </ol>
       </nav>
 
@@ -67,13 +71,19 @@ export default function ProductPage({ params }: ProductPageProps) {
         {/* Product Info */}
         <div className="space-y-6">
           <div>
-            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              {t(`products.${product.slug}.name`)}
+            <h1 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-1">
+              <span className="font-bold">{t(`products.${product.slug}.name`).substring(0, 2)}</span>
+              {t(`products.${product.slug}.name`).substring(2)}
             </h1>
-            <div className="text-3xl font-bold text-blue-600 mb-4">
+            {t(`products.${product.slug}.nameSubtitle`) && (
+              <p className="text-xl text-gray-700 mb-3 font-medium">
+                {t(`products.${product.slug}.nameSubtitle`)}
+              </p>
+            )}
+            <div className="text-3xl font-bold mb-4" style={{ color: '#694900' }}>
               RM{product.price.toFixed(2)}
             </div>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed text-justify">
               {t(`products.${product.slug}.shortDescription`)}
             </p>
           </div>
@@ -84,7 +94,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">
               {t('products.productDescription')}
             </h2>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed text-justify">
               {t(`products.${product.slug}.longDescription`)}
             </p>
           </div>
@@ -114,7 +124,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               <h2 className="text-xl font-semibold text-gray-900 mb-4">
                 {t('products.howToUse')}
               </h2>
-              <div className="bg-blue-50 rounded-lg p-4">
+              <div className="rounded-lg p-4" style={{ backgroundColor: '#f0e7d3' }}>
                 {Array.isArray(product.howToUse) || Array.isArray(t(`products.${product.slug}.howToUse`, { returnObjects: true })) ? (
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
                     {(t(`products.${product.slug}.howToUse`, { returnObjects: true }) as string[]).map((step: string, index: number) => (

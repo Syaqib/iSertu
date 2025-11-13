@@ -87,7 +87,9 @@ export default function BusinessAssociates() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2"
+            style={{ '--focus-ring-color': '#694900' } as React.CSSProperties & { '--focus-ring-color': string }}
+            onFocus={(e) => { e.currentTarget.style.outlineColor = '#694900'; }}
             aria-label="Previous slide"
           >
             <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,7 +99,9 @@ export default function BusinessAssociates() {
           
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2"
+            style={{ '--focus-ring-color': '#694900' } as React.CSSProperties & { '--focus-ring-color': string }}
+            onFocus={(e) => { e.currentTarget.style.outlineColor = '#694900'; }}
             aria-label="Next slide"
           >
             <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,8 +117,9 @@ export default function BusinessAssociates() {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+                index === currentSlide ? '' : 'bg-gray-300'
               }`}
+              style={index === currentSlide ? { backgroundColor: '#694900' } : {}}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

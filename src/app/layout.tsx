@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import "../styles/animations.css";
 import Navbar from "@/components/Navbar";
@@ -16,6 +16,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "iSertu - Premium Health & Wellness Products",
   description: "Transform your health naturally with our premium wellness products backed by science and natural ingredients.",
@@ -29,7 +35,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white text-gray-900 antialiased`}
+        className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable} min-h-screen bg-white text-gray-900 antialiased`}
+        style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
         suppressHydrationWarning={true}
       >
         <I18nProvider>

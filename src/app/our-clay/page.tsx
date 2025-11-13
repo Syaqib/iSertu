@@ -16,10 +16,10 @@ export default function OurClayPage() {
     <div className="bg-white">
       {/* Page intro */}
       <div className="py-20 text-center max-w-3xl mx-auto px-4">
-        <h1 className="text-5xl font-bold mb-4 text-gray-900">
+        <h1 className="text-4xl font-bold mb-4 text-gray-900">
           {t('pages.ourClay.title')}
         </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-gray-600 text-justify">
           {t('pages.ourClay.subtitle')}
         </p>
       </div>
@@ -53,7 +53,7 @@ export default function OurClayPage() {
              className="sticky top-[25%] z-10 max-w-lg bg-white/20 backdrop-blur-md text-white p-6 md:p-10 rounded-lg shadow-lg text-center md:text-left mx-4 md:ml-16 md:mx-0"
            >
              <h2 className="text-3xl md:text-4xl font-bold mb-4">{s.title}</h2>
-             <p className="text-base md:text-lg leading-relaxed">{s.text}</p>
+             <p className="text-base md:text-lg leading-relaxed text-justify">{s.text}</p>
            </motion.div>
          </section>
        ))}

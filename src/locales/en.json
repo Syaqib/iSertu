@@ -12,8 +12,8 @@
     "login": "Login / Sign Up"
   },
   "hero": {
-    "title": "Transform Your Health",
-    "subtitle": "Naturally",
+    "title": "The Power Of Nature",
+    "subtitle": "",
     "description": "Discover premium wellness products that support your journey to a healthier, more vibrant life with science-backed ingredients and natural solutions.",
     "shopNow": "Shop Now",
     "learnMore": "Learn More"
@@ -32,8 +32,9 @@
     "howToUse": "How To Use",
     "relatedProducts": "Related Products",
     "vlskin-bodywash-500ml": {
-      "name": "VLSkin Bodywash 500ml",
-      "shortDescription": "Gentle cleansing with fine, comfortable foam (500ml)",
+      "name": "VLSKIN",
+      "nameSubtitle": "Liquid Bodywash",
+      "shortDescription": "Suitable for daily use. Gentle by nature 500ml",
       "longDescription": "VLSkin Bodywash is formulated with premium ingredients to provide gentle yet effective cleansing for all skin types. Our advanced formula creates fine, comfortable foam that thoroughly cleanses while maintaining your skin's natural moisture balance. Perfect for daily use by the whole family, this bodywash leaves your skin feeling refreshed, clean, and soft without any harsh chemicals or artificial fragrances.",
       "keyBenefits": [
         "Cleanses with fine, comfortable foam",
@@ -44,8 +45,9 @@
       "howToUse": "Wet the body, pour onto palm or sponge, lather gently all over, then rinse thoroughly."
     },
     "vlskin-clay-bar-soap-80gm": {
-      "name": "VLSkin Clay Bar Soap 80gm",
-      "shortDescription": "Compact clay bar for gentle cleansing without drying",
+      "name": "VLSKIN",
+      "nameSubtitle": "Clay Bar soap",
+      "shortDescription": "Pure Clay. Pure Clean. 80gm",
       "longDescription": "VLSkin Clay Bar Soap combines the natural cleansing power of clay with gentle moisturizing properties. This compact 80gm bar is perfect for travel and daily use, providing effective cleansing without stripping your skin of its natural oils. The clay formula helps to remove impurities while leaving your skin feeling smooth and refreshed. Its solid form makes it more economical and environmentally friendly compared to liquid soaps.",
       "keyBenefits": [
         "Cleanses without drying",
@@ -56,8 +58,9 @@
       "howToUse": "Lather onto palm or sponge, apply to skin, then rinse thoroughly."
     },
     "vlsuper-sertu-liquid-clay-500ml": {
-      "name": "VLSuper Sertu Liquid Clay 500ml",
-      "shortDescription": "Consistent clay mix for sertu cleansing (500ml)",
+      "name": "VLSUPER",
+      "nameSubtitle": "Sertu Liquid Clay",
+      "shortDescription": "Purification made simple. Cleanliness assured 500ml",
       "longDescription": "VLSuper Sertu Liquid Clay provides a consistent and practical solution for sertu cleansing according to Islamic principles. This pre-mixed clay solution eliminates the guesswork in preparing the correct clay mixture for cleansing najis mughallazah. The liquid form ensures even distribution and effective cleansing on various surfaces including metal, plastic, glass, and floors. Available in both household and industrial sizes to meet different needs.",
       "keyBenefits": [
         "Consistent & practical clay mix",
@@ -72,8 +75,9 @@
       ]
     },
     "vlsuper-natural-sanitizer-200ml": {
-      "name": "VLSuper Natural Sanitizer 200ml",
-      "shortDescription": "Quick-drying natural sanitizer for hands and surfaces (200ml)",
+      "name": "VLSUPER",
+      "nameSubtitle": "Natural Sanitizer",
+      "shortDescription": "Alcohol free natural sanitizer 200ml",
       "longDescription": "VLSuper Natural Sanitizer offers effective hand and surface sanitization using natural ingredients. This 200ml spray bottle provides quick-drying, non-sticky sanitization that's comfortable for daily use. The compact size makes it perfect for travel, office, or personal use. Formulated with natural ingredients, it provides reliable sanitization without harsh chemicals, making it safe for frequent use by the whole family.",
       "keyBenefits": [
         "Quick-drying & comfortable",
@@ -156,7 +160,7 @@
         "description": "Free from harsh chemicals, gentle on skin, suitable for the whole family."
       },
       {
-        "title": "Shariah compliance",
+        "title": "Meet Fiqh Requirement",
         "description": "The formula can be used for sertu (najis mughallazah), making it simple, fast, and reliable."
       },
       {
@@ -165,6 +169,14 @@
       }
     ],
     "conclusion": "With CWE, we aim to deliver hygiene solutions that are cleaner, safer, and more blessed."
+  },
+  "home": {
+    "mission": {
+      "paragraph1": "Vital Life Solution Sdn. Bhd. stands at the intersection of science, sustainability, and ethical innovation. Our mission is to develop advanced, responsible wellness solutions — from bodycare to hygiene and purification technologies.",
+      "paragraph2": "Driven by research and guided by integrity, every VLS product is created with an unwavering commitment to safety, efficacy, and environmental care. We believe technology and ethics can coexist — shaping cleaner, smarter, and more sustainable solutions for modern living.",
+      "paragraph3": "In a world dominated by synthetic alternatives, we return to nature — rediscovering the cleansing power of pure clay, refined and enhanced through science. At the heart of every formulation lies our Clay Water Enzyme technology, developed through a specialized process that unlocks natural antibacterial, detoxifying, and purifying properties.",
+      "paragraph4": "This is more than cleanliness — it's about restoring balance to the skin, the home, and the environment. Each product is free from harsh chemicals, safe for daily use, and designed to deliver visible results while remaining gentle on people and the planet. From body washes to multipurpose cleaners, every VLS solution is crafted with purpose: to care, to cleanse, and to protect — offering natural purity, powered by nature, perfected through innovation."
+    }
   },
   "pages": {
     "ourStory": {

@@ -12,7 +12,7 @@ export default function AboutPage() {
               <h1 className="text-4xl font-light text-gray-900 mb-6">
                 {t('navbar.aboutVLS')}
               </h1>
-              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+              <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#694900' }}></div>
             </div>
 
         {/* Main Content - Clean Single Card */}
@@ -22,11 +22,11 @@ export default function AboutPage() {
               {t('pages.aboutUs.title')}
             </h2>
             
-            <p className="text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 text-center">
+            <p className="text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 text-justify">
               {t('pages.aboutUs.description')}
             </p>
 
-            <div className="bg-blue-50 rounded-xl p-6 md:p-8 mb-8 md:mb-12">
+            <div className="rounded-xl p-6 md:p-8 mb-8 md:mb-12" style={{ backgroundColor: '#f0e7d3' }}>
               <p className="text-lg text-gray-700 text-center italic">
                 &quot;{t('pages.aboutUs.philosophy')}&quot;
               </p>
@@ -36,7 +36,7 @@ export default function AboutPage() {
               {/* Vision */}
               <div className="text-center">
                 <h3 className="text-xl font-medium text-gray-900 mb-4">{t('pages.aboutUs.vision.title')}</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-justify">
                   {t('pages.aboutUs.vision.description')}
                 </p>
               </div>
@@ -44,7 +44,7 @@ export default function AboutPage() {
               {/* Mission */}
               <div className="text-center">
                 <h3 className="text-xl font-medium text-gray-900 mb-4">{t('pages.aboutUs.mission.title')}</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-justify">
                   {t('pages.aboutUs.mission.description')}
                 </p>
               </div>
@@ -52,7 +52,7 @@ export default function AboutPage() {
 
             {/* Mission Statement */}
             <div className="mt-8 md:mt-12 text-center">
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-6 md:p-8 text-white">
+                <div className="rounded-xl p-6 md:p-8 text-white" style={{ backgroundColor: '#694900' }}>
                 <h3 className="text-xl font-medium mb-4">{t('pages.aboutUs.missionStatement.title')}</h3>
                 <p className="text-lg italic">
                   &quot;{t('pages.aboutUs.missionStatement.quote')}&quot;

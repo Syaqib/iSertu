@@ -37,13 +37,9 @@ export default function Navbar() {
     router.push('/products');
   };
 
-  const handleBrandClick = (brand: string) => {
+  const handleBrandClick = (productSlug: string) => {
     setIsBrandsOpen(false);
-    const routes = {
-      'VLSuper': '/products/vlsuper-sertu-liquid-clay-500ml', // Sertu and Sanitizer
-      'VLSkin': '/products/vlskin-bodywash-500ml' // Soap Bar and Bodywash
-    };
-    router.push(routes[brand as keyof typeof routes]);
+    router.push(`/products/${productSlug}`);
   };
 
   const handleLanguageChange = (language: string) => {
@@ -144,7 +140,7 @@ export default function Navbar() {
               <div className="relative" ref={languageRef}>
                 <button
                   onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                  className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+                  className="text-gray-700 hover:text-[#694900] px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
                 >
                   {i18n.language === 'en' ? 'EN' : 'BM'}
                   <svg
@@ -162,16 +158,18 @@ export default function Navbar() {
                     <button
                       onClick={() => handleLanguageChange('en')}
                       className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 first:rounded-t-lg ${
-                        i18n.language === 'en' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                        i18n.language === 'en' ? 'text-[#694900]' : 'text-gray-700'
                       }`}
+                      style={i18n.language === 'en' ? { backgroundColor: '#f0e7d3' } : {}}
                     >
                       EN
                     </button>
                     <button
                       onClick={() => handleLanguageChange('bm')}
                       className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 last:rounded-b-lg ${
-                        i18n.language === 'bm' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                        i18n.language === 'bm' ? 'text-[#694900]' : 'text-gray-700'
                       }`}
+                      style={i18n.language === 'bm' ? { backgroundColor: '#f0e7d3' } : {}}
                     >
                       BM
                     </button>
@@ -186,7 +184,7 @@ export default function Navbar() {
             <div className="relative" ref={mobileLanguageRef}>
               <button
                 onClick={() => setIsMobileLanguageOpen(!isMobileLanguageOpen)}
-                className="text-gray-700 hover:text-blue-600 px-4 py-3 text-sm font-medium transition-colors duration-200 flex items-center gap-2 min-h-[44px] min-w-[44px] touch-manipulation"
+                className="text-gray-700 hover:text-[#694900] px-4 py-3 text-sm font-medium transition-colors duration-200 flex items-center gap-2 min-h-[44px] min-w-[44px] touch-manipulation"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 {i18n.language === 'en' ? 'EN' : 'BM'}
@@ -208,9 +206,9 @@ export default function Navbar() {
                       setIsMobileLanguageOpen(false);
                     }}
                     className={`w-full text-left px-4 py-3 text-sm hover:bg-gray-50 first:rounded-t-lg min-h-[44px] touch-manipulation ${
-                      i18n.language === 'en' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                      i18n.language === 'en' ? 'text-[#694900]' : 'text-gray-700'
                     }`}
-                    style={{ WebkitTapHighlightColor: 'transparent' }}
+                    style={{ WebkitTapHighlightColor: 'transparent', ...(i18n.language === 'en' ? { backgroundColor: '#f0e7d3' } : {}) }}
                   >
                     EN
                   </button>
@@ -220,9 +218,9 @@ export default function Navbar() {
                       setIsMobileLanguageOpen(false);
                     }}
                     className={`w-full text-left px-4 py-3 text-sm hover:bg-gray-50 last:rounded-b-lg min-h-[44px] touch-manipulation ${
-                      i18n.language === 'bm' ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                      i18n.language === 'bm' ? 'text-[#694900]' : 'text-gray-700'
                     }`}
-                    style={{ WebkitTapHighlightColor: 'transparent' }}
+                    style={{ WebkitTapHighlightColor: 'transparent', ...(i18n.language === 'bm' ? { backgroundColor: '#f0e7d3' } : {}) }}
                   >
                     BM
                   </button>
@@ -236,7 +234,7 @@ export default function Navbar() {
             <div className={`flex items-center whitespace-nowrap ${i18n.language === 'bm' ? 'space-x-4' : 'space-x-3'}`}>
               <button
                 onClick={handleProductsClick}
-                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.products')}
               </button>
@@ -245,7 +243,7 @@ export default function Navbar() {
               <div className="relative" ref={brandsRef}>
                 <button
                   onClick={() => setIsBrandsOpen(!isBrandsOpen)}
-                  className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1 whitespace-nowrap"
+                  className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1 whitespace-nowrap"
                 >
                   {t('navbar.brands')}
                   <svg
@@ -259,38 +257,22 @@ export default function Navbar() {
                 </button>
 
                 {isBrandsOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-80 dropdown-menu p-6 z-50 dropdown-enter">
-                    <div className="grid grid-cols-2 gap-6">
+                  <div className="absolute top-full left-0 mt-1 w-40 dropdown-menu p-2 z-50 dropdown-enter">
+                    <div className="flex flex-col gap-1">
                       {/* VLSuper */}
                       <button
-                        onClick={() => handleBrandClick('VLSuper')}
-                        className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
+                        onClick={() => handleBrandClick('vlsuper-sertu-liquid-clay-500ml')}
+                        className="text-left px-4 py-2 text-sm hover:bg-gray-50 rounded-lg transition-colors duration-200"
                       >
-                        <div className="h-24 w-32 rounded-lg mb-3 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200" style={{ backgroundColor: '#838010' }}>
-                          <Image
-                            src="/images/vlsuper_label.jpg"
-                            alt="VLSuper Label"
-                            width={64}
-                            height={64}
-                            className="h-16 w-auto object-contain"
-                          />
-                        </div>
+                        VLSuper
                       </button>
 
                       {/* VLSkin */}
                       <button
-                        onClick={() => handleBrandClick('VLSkin')}
-                        className="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
+                        onClick={() => handleBrandClick('vlskin-bodywash-500ml')}
+                        className="text-left px-4 py-2 text-sm hover:bg-gray-50 rounded-lg transition-colors duration-200"
                       >
-                        <div className="h-24 w-32 rounded-lg mb-3 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200" style={{ backgroundColor: '#F4DFD8' }}>
-                          <Image
-                            src="/images/vlskin_label.jpg"
-                            alt="VLSkin Label"
-                            width={64}
-                            height={64}
-                            className="h-16 w-auto object-contain"
-                          />
-                        </div>
+                        VLSkin
                       </button>
                     </div>
                   </div>
@@ -299,31 +281,31 @@ export default function Navbar() {
               
               <Link
                 href="/our-technology"
-                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.ourTechnology')}
               </Link>
               <Link
                 href="/our-clay"
-                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.ourClay')}
               </Link>
               <Link
                 href="/about"
-                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.aboutVLS')}
               </Link>
               <Link
                 href="/our-story"
-                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.ourStory')}
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.contact')}
               </Link>
@@ -338,7 +320,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 p-2"
+              className="text-gray-700 hover:text-[#694900] focus:outline-none focus:ring-2 focus:ring-[#694900] focus:ring-offset-2 p-2"
               aria-label="Toggle navigation menu"
             >
               <svg
@@ -370,86 +352,70 @@ export default function Navbar() {
                   handleProductsClick();
                   setIsMenuOpen(false);
                 }}
-                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium w-full text-left"
+                className="text-gray-700 hover:text-[#694900] block px-4 py-2 text-base font-medium w-full text-left"
               >
                 {t('navbar.products')}
               </button>
               
                 {/* Mobile Brands Section */}
                 <div className="px-3 py-2">
-                  <div className="text-gray-700 text-base font-medium mb-4">{t('navbar.brands')}</div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="text-gray-700 text-base font-medium mb-2 px-1">{t('navbar.brands')}</div>
+                  <div className="flex flex-col gap-1">
                     {/* VLSuper */}
                     <button
                       onClick={() => {
-                        handleBrandClick('VLSuper');
+                        handleBrandClick('vlsuper-sertu-liquid-clay-500ml');
                         setIsMenuOpen(false);
                       }}
-                      className="flex flex-col items-center p-3 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
+                      className="text-left px-4 py-2 text-base hover:bg-gray-50 rounded-lg transition-colors duration-200 w-full"
                     >
-                      <div className="h-16 w-24 rounded-lg mb-2 flex items-center justify-center shadow-sm" style={{ backgroundColor: '#838010' }}>
-                        <Image
-                          src="/images/vlsuper_label.jpg"
-                          alt="VLSuper Label"
-                          width={48}
-                          height={48}
-                          className="h-12 w-auto object-contain"
-                        />
-                      </div>
+                      VLSuper
                     </button>
 
                     {/* VLSkin */}
                     <button
                       onClick={() => {
-                        handleBrandClick('VLSkin');
+                        handleBrandClick('vlskin-bodywash-500ml');
                         setIsMenuOpen(false);
                       }}
-                      className="flex flex-col items-center p-3 hover:scale-105 transition-transform duration-200 hover:bg-gray-50 rounded-lg group"
+                      className="text-left px-4 py-2 text-base hover:bg-gray-50 rounded-lg transition-colors duration-200 w-full"
                     >
-                      <div className="h-16 w-24 rounded-lg mb-2 flex items-center justify-center shadow-sm" style={{ backgroundColor: '#F4DFD8' }}>
-                        <Image
-                          src="/images/vlskin_label.jpg"
-                          alt="VLSkin Label"
-                          width={48}
-                          height={48}
-                          className="h-12 w-auto object-contain"
-                        />
-                      </div>
+                      VLSkin
                     </button>
                   </div>
                 </div>
               
               <Link
                 href="/our-technology"
-                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
+                className="text-gray-700 hover:text-[#694900] block px-4 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.ourTechnology')}
               </Link>
               <Link
                 href="/our-clay"
-                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
+                className="text-gray-700 hover:text-[#694900] block px-4 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.ourClay')}
               </Link>
               <Link
                 href="/about"
-                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
+                className="text-gray-700 hover:text-[#694900] block px-4 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.aboutVLS')}
               </Link>
               <Link
                 href="/our-story"
-                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
+                className="text-gray-700 hover:text-[#694900] block px-4 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.ourStory')}
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-blue-600 block px-4 py-2 text-base font-medium"
+                className="text-gray-700 hover:text-[#694900] block px-4 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.contact')}

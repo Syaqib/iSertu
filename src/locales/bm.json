@@ -12,8 +12,8 @@
     "login": "Log Masuk / Daftar"
   },
   "hero": {
-    "title": "Ubah Kesihatan Anda",
-    "subtitle": "Secara Semula Jadi",
+    "title": "Kuasa Alam Semula Jadi",
+    "subtitle": "",
     "description": "Temui produk kesihatan premium yang menyokong perjalanan anda ke kehidupan yang lebih sihat dan bertenaga dengan ramuan berasaskan sains dan penyelesaian semula jadi.",
     "shopNow": "Beli Sekarang",
     "learnMore": "Ketahui Lebih Lanjut"
@@ -32,8 +32,9 @@
     "howToUse": "Cara Penggunaan",
     "relatedProducts": "Produk Berkaitan",
     "vlskin-bodywash-500ml": {
-      "name": "VLSkin Bodywash 500ml",
-      "shortDescription": "Pembersihan lembut dengan buih halus dan selesa (500ml)",
+      "name": "VLSKIN",
+      "nameSubtitle": "Liquid Bodywash",
+      "shortDescription": "Sesuai untuk kegunaan harian. Lembut secara semula jadi 500ml",
       "longDescription": "VLSkin Bodywash diformulasikan dengan bahan-bahan premium untuk memberikan pembersihan yang lembut namun berkesan untuk semua jenis kulit. Formula canggih kami menghasilkan buih halus dan selesa yang membersihkan dengan sempurna sambil mengekalkan keseimbangan kelembapan semula jadi kulit anda. Sesuai untuk kegunaan harian oleh seluruh keluarga, bodywash ini meninggalkan kulit anda berasa segar, bersih, dan lembut tanpa bahan kimia keras atau wangian tiruan.",
       "keyBenefits": [
         "Membersih dengan buih halus & selesa",
@@ -44,8 +45,9 @@
       "howToUse": "Basahkan badan, tuangkan secukupnya ke tapak tangan atau span, urut perlahan ke seluruh badan, kemudian bilas bersih."
     },
     "vlskin-clay-bar-soap-80gm": {
-      "name": "VLSkin Clay Bar Soap 80gm",
-      "shortDescription": "Sabun tanah liat kompak untuk pembersihan lembut tanpa kekeringan",
+      "name": "VLSKIN",
+      "nameSubtitle": "Clay Bar soap",
+      "shortDescription": "Tanah Liat Tulen. Kebersihan Tulen. 80gm",
       "longDescription": "VLSkin Clay Bar Soap menggabungkan kuasa pembersihan semula jadi tanah liat dengan sifat pelembap yang lembut. Bar kompak 80gm ini sesuai untuk perjalanan dan kegunaan harian, memberikan pembersihan yang berkesan tanpa menghilangkan minyak semula jadi kulit anda. Formula tanah liat membantu membuang kekotoran sambil meninggalkan kulit anda berasa licin dan segar. Bentuk pepejalnya menjadikannya lebih ekonomik dan mesra alam berbanding sabun cecair.",
       "keyBenefits": [
         "Membersih tanpa rasa kering",
@@ -56,8 +58,9 @@
       "howToUse": "Buihkan pada tapak tangan atau span, sapukan ke kulit, bilas bersih."
     },
     "vlsuper-sertu-liquid-clay-500ml": {
-      "name": "VLSuper Sertu Liquid Clay 500ml",
-      "shortDescription": "Bancuhan tanah liat konsisten untuk pembersihan sertu (500ml)",
+      "name": "VLSUPER",
+      "nameSubtitle": "Sertu Liquid Clay",
+      "shortDescription": "Penulenan dibuat mudah. Kebersihan terjamin 500ml",
       "longDescription": "VLSuper Sertu Liquid Clay menyediakan solusi yang konsisten dan praktikal untuk pembersihan sertu mengikut prinsip Islam. Larutan tanah liat pra-campuran ini menghapuskan tekaan dalam menyediakan bancuhan tanah liat yang betul untuk membersihkan najis mughallazah. Bentuk cecair memastikan pengedaran yang sekata dan pembersihan yang berkesan pada pelbagai permukaan termasuk logam, plastik, kaca, dan lantai. Tersedia dalam saiz isi rumah dan industri untuk memenuhi keperluan yang berbeza.",
       "keyBenefits": [
         "Bancuhan konsisten & praktikal",
@@ -72,8 +75,9 @@
       ]
     },
     "vlsuper-natural-sanitizer-200ml": {
-      "name": "VLSuper Natural Sanitizer 200ml",
-      "shortDescription": "Sanitizer semula jadi cepat kering untuk tangan dan permukaan (200ml)",
+      "name": "VLSUPER",
+      "nameSubtitle": "Natural Sanitizer",
+      "shortDescription": "Sanitizer semula jadi bebas alkohol 200ml",
       "longDescription": "VLSuper Natural Sanitizer menawarkan sanitasi tangan dan permukaan yang berkesan menggunakan bahan-bahan semula jadi. Botol sembur 200ml ini memberikan sanitasi cepat kering dan tidak melekit yang selesa untuk kegunaan harian. Saiz kompak menjadikannya sesuai untuk perjalanan, pejabat, atau kegunaan peribadi. Diformulasikan dengan bahan-bahan semula jadi, ia memberikan sanitasi yang boleh dipercayai tanpa bahan kimia keras, menjadikannya selamat untuk kegunaan kerap oleh seluruh keluarga.",
       "keyBenefits": [
         "Cepat kering & selesa",
@@ -144,7 +148,7 @@
     "description": "Kami di sini untuk membantu anda dengan sebarang soalan mengenai produk atau perkhidmatan kami. Jangan teragak-agak untuk menghubungi kami menggunakan maklumat hubungan yang disediakan di atas, dan kami akan membalas anda secepat mungkin."
   },
   "clayWaterEnzyme": {
-    "title": "Kenapa Clay Water Enzyme?",
+    "title": "Kenapa Enzim Tanah Liat?",
     "description": "Kami percaya pembersihan sebenar bermula dari bahan paling asas: tanah. Clay Water Enzyme (CWE) ialah inovasi berasaskan kaolin clay yang bukan sekadar bersih, tetapi juga selamat, semula jadi, dan berfungsi sebagai antiseptik semula jadi.",
     "benefits": [
       {
@@ -156,7 +160,7 @@
         "description": "Bebas bahan kimia keras, lembut pada kulit, sesuai untuk seisi keluarga."
       },
       {
-        "title": "Kepatuhan Syariah",
+        "title": "Menepati Hukum Fiqh",
         "description": "Formula boleh digunakan untuk sertu (najis mughallazah), menjadikannya mudah, pantas, dan diyakini."
       },
       {
@@ -165,6 +169,14 @@
       }
     ],
     "conclusion": "Dengan CWE, kami mahu membawa solusi kebersihan yang lebih bersih, lebih selamat, dan lebih berkat."
+  },
+  "home": {
+    "mission": {
+      "paragraph1": "Vital Life Solution Sdn. Bhd. berdiri di persimpangan sains, kemampanan, dan inovasi etika. Misi kami adalah untuk membangunkan penyelesaian kesihatan yang maju dan bertanggungjawab — dari penjagaan badan hingga teknologi kebersihan dan penulenan.",
+      "paragraph2": "Didorong oleh penyelidikan dan dipandu oleh integriti, setiap produk VLS dicipta dengan komitmen yang tidak berbelah bahagi terhadap keselamatan, keberkesanan, dan penjagaan alam sekitar. Kami percaya teknologi dan etika boleh wujud bersama — membentuk penyelesaian yang lebih bersih, lebih pintar, dan lebih mampan untuk kehidupan moden.",
+      "paragraph3": "Dalam dunia yang dikuasai oleh alternatif sintetik, kami kembali ke alam semula jadi — menemui semula kuasa pembersihan tanah liat tulen, yang diperhalus dan dipertingkatkan melalui sains. Di jantung setiap formulasi terletak teknologi Enzim Air Tanah Liat kami, yang dibangunkan melalui proses khusus yang membuka kunci sifat antibakteria, detoksifikasi, dan penulenan semula jadi.",
+      "paragraph4": "Ini lebih daripada kebersihan — ia tentang memulihkan keseimbangan kepada kulit, rumah, dan alam sekitar. Setiap produk bebas dari bahan kimia keras, selamat untuk kegunaan harian, dan direka untuk memberikan hasil yang kelihatan sambil kekal lembut pada manusia dan planet. Dari pencuci badan hingga pembersih serbaguna, setiap penyelesaian VLS dicipta dengan tujuan: untuk menjaga, untuk membersihkan, dan untuk melindungi — menawarkan kesucian semula jadi, dikuasai oleh alam, disempurnakan melalui inovasi."
+    }
   },
   "pages": {
     "ourStory": {

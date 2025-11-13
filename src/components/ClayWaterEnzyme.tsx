@@ -55,7 +55,7 @@ export default function ClayWaterEnzyme() {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             {t('clayWaterEnzyme.title')}
           </h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed text-justify">
             {t('clayWaterEnzyme.description')}
           </p>
         </div>
@@ -65,12 +65,13 @@ export default function ClayWaterEnzyme() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-blue-50 border border-blue-100 rounded-lg p-6 hover:shadow-md transition-shadow duration-200"
+              className="border rounded-lg p-6 hover:shadow-md transition-shadow duration-200"
+              style={{ backgroundColor: '#f0e7d3', borderColor: '#755a1a' }}
             >
-              <h3 className="text-lg font-semibold text-blue-900 mb-3">
+              <h3 className="text-lg font-semibold mb-3" style={{ color: '#694900' }}>
                 {benefit.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed text-justify">
                 {benefit.description}
               </p>
             </div>
@@ -79,8 +80,8 @@ export default function ClayWaterEnzyme() {
 
         {/* Conclusion */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 text-white">
-            <p className="text-lg font-medium leading-relaxed">
+          <div className="rounded-lg p-8 text-white" style={{ backgroundColor: '#694900' }}>
+            <p className="text-lg font-medium leading-relaxed text-justify">
               {t('clayWaterEnzyme.conclusion')}
             </p>
           </div>

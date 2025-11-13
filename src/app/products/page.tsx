@@ -38,7 +38,7 @@ export default function ProductsPage() {
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Introduction Paragraph */}
         <div className="max-w-4xl mx-auto mb-16">
-          <p className="text-lg text-gray-700 leading-relaxed text-center">
+          <p className="text-lg text-gray-700 leading-relaxed text-justify">
             {t('pages.products.description')}
           </p>
         </div>

@@ -14,7 +14,7 @@ export default function ContactPage() {
           <h1 className="text-4xl font-light text-gray-900 mb-4">
             {t('contact.title')}
           </h1>
-          <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-16 h-1 mx-auto" style={{ backgroundColor: '#694900' }}></div>
         </div>
 
         {/* Main Content - Single Clean Card */}
@@ -25,6 +25,15 @@ export default function ContactPage() {
               <h2 className="text-2xl font-medium text-gray-900 mb-6">
                 {t('contact.manufacturedBy')}
               </h2>
+              <div className="flex justify-center mb-4">
+                <Image
+                  src="/images/VLSme-Logo.png"
+                  alt="VLSme Logo"
+                  width={1080}
+                  height={1080}
+                  className="h-36 w-auto object-contain"
+                />
+              </div>
               <div className="space-y-3">
                 <div>
                   <p className="text-gray-600">
@@ -35,9 +44,8 @@ export default function ContactPage() {
                 <div>
                   <p className="text-gray-600">
                     <span className="font-medium text-gray-900">Address:</span><br />
-                    B-01-09, Savanna Lifestyle Retail,<br />
-                    Jalan BBL 2, Southville City,<br />
-                    43800 Dengkil, Selangor, MALAYSIA
+                    184. Jalan Nilai 7/1, Kawasan Perindustrian Nilai 7,<br />
+                    71800 Nilai, Negeri Sembilan Darul Khusus
                   </p>
                 </div>
               </div>
@@ -90,7 +98,7 @@ export default function ContactPage() {
 
               {/* Additional Information */}
               <div className="text-center pt-6 border-t border-gray-200">
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-justify">
                   {t('contact.description')}
                 </p>
               </div>
