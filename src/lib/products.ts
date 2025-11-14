@@ -17,7 +17,7 @@ export const products: Product[] = [
     slug: "vlskin-bodywash-500ml",
     price: 35,
     shortDescription: "Gentle cleansing with fine, comfortable foam (500ml)",
-    longDescription: "Experience the gentle power of kaolin clay in our premium bodywash. Formulated with natural clay minerals, this bodywash cleanses effectively while maintaining your skin's natural moisture balance. Perfect for daily use by the whole family, it provides a refreshing cleanse with a mild, soothing fragrance that won't irritate sensitive skin.",
+    longDescription: "Experience the gentle power of high quality clay powder in our premium bodywash. Formulated with natural clay minerals, this bodywash cleanses effectively while maintaining your skin's natural moisture balance. Perfect for daily use by the whole family, it provides a refreshing cleanse with a mild, soothing fragrance that won't irritate sensitive skin.",
     image: "/images/vlskin_bodywash.jpg",
     keyBenefits: [
       "Cleanses with fine, comfortable foam",
@@ -33,15 +33,15 @@ export const products: Product[] = [
     slug: "vlskin-clay-bar-soap-80gm",
     price: 30,
     shortDescription: "Compact clay bar for gentle cleansing without drying",
-    longDescription: "Discover the convenience of our kaolin clay bar soap. This compact, travel-friendly bar provides effective cleansing without stripping your skin of its natural oils. The concentrated formula means it lasts longer than liquid soap while delivering the same gentle, moisturizing benefits of kaolin clay. Perfect for home use or travel.",
+    longDescription: "Discover the convenience of our high quality clay powder bar soap. This compact, travel-friendly bar provides effective cleansing without stripping your skin of its natural oils. The concentrated formula means it lasts longer than liquid soap while delivering the same gentle, moisturizing benefits of premium clay minerals. Perfect for home use or travel.",
     image: "/images/vlskin_bar.jpg",
     keyBenefits: [
       "Cleanses without drying",
       "Leaves skin smooth after rinsing",
       "Compact & travel-friendly size",
-      "Longer-lasting compared to liquid soap"
+      "Suitable and convenient for those who prefer bar soap to liquid soap"
     ],
-    howToUse: "Lather onto palm or sponge, apply to skin, then rinse thoroughly."
+    howToUse: "Wet skin and apply the bar soap directly to the body. Rinse thoroughly after use."
   },
   {
     id: "3",

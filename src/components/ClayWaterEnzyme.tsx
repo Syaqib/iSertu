@@ -46,6 +46,9 @@ export default function ClayWaterEnzyme() {
     title: string;
     description: string;
   }>;
+  const additionalParagraph = t('clayWaterEnzyme.additionalParagraph', {
+    defaultValue: ''
+  });
 
   return (
     <section className="py-16 bg-white">
@@ -58,6 +61,11 @@ export default function ClayWaterEnzyme() {
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed text-justify">
             {t('clayWaterEnzyme.description')}
           </p>
+          {additionalParagraph && (
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed text-justify mt-6">
+              {additionalParagraph}
+            </p>
+          )}
         </div>
 
         {/* Benefits Grid */}

@@ -48,14 +48,14 @@
       "name": "VLSKIN",
       "nameSubtitle": "Clay Bar soap",
       "shortDescription": "Pure Clay. Pure Clean. 80gm",
-      "longDescription": "VLSkin Clay Bar Soap combines the natural cleansing power of clay with gentle moisturizing properties. This compact 80gm bar is perfect for travel and daily use, providing effective cleansing without stripping your skin of its natural oils. The clay formula helps to remove impurities while leaving your skin feeling smooth and refreshed. Its solid form makes it more economical and environmentally friendly compared to liquid soaps.",
+      "longDescription": "VLSkin Clay Bar Soap combines the natural cleansing power of high quality clay powder with gentle moisturizing properties. This compact 80gm bar is perfect for travel and daily use, providing effective cleansing without stripping your skin of its natural oils. The clay formula helps to remove impurities while leaving your skin feeling smooth and refreshed. Its solid form makes it more economical and environmentally friendly compared to liquid soaps.",
       "keyBenefits": [
         "Cleanses without drying",
         "Leaves skin smooth after rinsing",
         "Compact & travel-friendly size",
-        "Longer-lasting compared to liquid soap"
+        "Suitable and convenient for those who prefer bar soap to liquid soap"
       ],
-      "howToUse": "Lather onto palm or sponge, apply to skin, then rinse thoroughly."
+      "howToUse": "Wet skin and apply the bar soap directly to the body. Rinse thoroughly after use."
     },
     "vlsuper-sertu-liquid-clay-500ml": {
       "name": "VLSUPER",
@@ -149,11 +149,12 @@
   },
   "clayWaterEnzyme": {
     "title": "Why Clay Water Enzyme?",
-    "description": "We believe true cleanliness starts from the most basic element: earth. Clay Water Enzyme (CWE) is a kaolin clay–based innovation that is not only cleansing, but also safe, natural, and acts as a natural antiseptic.",
+    "description": "We believe true cleanliness starts from the most basic element: earth. Clay Water Enzyme (CWE) is a high quality clay powder–based innovation that is not only cleansing, but also safe, natural, and acts as a natural antiseptic.",
+    "additionalParagraph": "Clay powder is finely ground clay, made from natural mineral deposits like kaolin or bentonite, used as a raw material in many industries and as a cosmetic ingredient. It can be a soft white powder called kaolin or a reddish-brown powder like bentonite, and its fine particle size makes it ideal for masks, fillers, and manufacturing processes like ceramics and paper.",
     "benefits": [
       {
         "title": "Natural origin",
-        "description": "Kaolin clay has been used for centuries as a cleansing and detoxifying agent. We combine it with enzyme technology for maximum effectiveness."
+        "description": "High quality clay powder has been used for centuries as a cleansing and detoxifying agent. We combine it with enzyme technology for maximum effectiveness."
       },
       {
         "title": "Health & safety",
@@ -184,7 +185,7 @@
       "subtitle": "From humble beginnings, our journey began with a simple question:",
       "question": "Can nature cleanse as powerfully as it heals?",
       "discovery": "Driven by this curiosity, we discovered the remarkable properties of",
-      "technology": "clay water enzyme technology",
+      "technology": "clay water enzyme",
       "effects": "— a natural formulation with powerful cleansing, antibacterial, and purifying effects. What started as an idea became a mission: to create safe, effective, and environmentally respectful products for everyday life.",
       "journey": "From the first batch of clay water to a full range of multipurpose cleaners, body care, and surface solutions — our story is one of",
       "values": "science, sustainability, and sincerity",
@@ -221,15 +222,15 @@
       "sections": [
         {
           "title": "The Purity Beneath. The Power Within.",
-          "text": "Beneath every surface we cleanse lies a story — of earth, water, and transformation. Our clay originates from naturally rich kaolin deposits, refined through Clay Water Enzyme Technology. From raw mineral to perfected formula, every drop carries the essence of natural purity — gentle, safe, and effective for daily use."
+          "text": "Beneath every surface we cleanse lies a story — of earth, water, and transformation. Our clay originates from naturally rich high quality clay powder deposits, refined through Clay Water Enzyme Technology. From raw mineral to perfected formula, every drop carries the essence of natural purity — gentle, safe, and effective for daily use."
         },
         {
-          "title": "The History of Kaolin",
-          "text": "Kaolin, or white clay, was first discovered in China around 300 BC. Treasured for centuries in porcelain and medicine, it later transformed industries worldwide — from ceramics to skincare — admired for its purity and natural cleansing power."
+          "title": "The History of High Quality Clay Powder",
+          "text": "High quality clay powder, whether the soft white kaolin or reddish-brown bentonite, was first discovered in China around 300 BC. Treasured for centuries in porcelain and medicine, it later transformed industries worldwide — from ceramics to skincare — admired for its purity and natural cleansing power."
         },
         {
           "title": "Where Nature Meets Innovation",
-          "text": "Our process uses advanced nanotechnology to extract the Clay Water Enzyme directly from kaolin — producing a powerful yet gentle base that purifies, protects, and revitalizes both skin and surfaces."
+          "text": "Our process uses advanced nanotechnology to extract the Clay Water Enzyme directly from high quality clay powder — producing a powerful yet gentle base that purifies, protects, and revitalizes both skin and surfaces."
         },
         {
           "title": "Purity You Can Feel",
