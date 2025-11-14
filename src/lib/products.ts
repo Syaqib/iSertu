@@ -75,7 +75,8 @@ export const products: Product[] = [
       "Quick-drying & comfortable",
       "Non-sticky on skin",
       "Small size, perfect for travel & pocket use",
-      "Ideal for everyday use"
+      "Ideal for everyday use",
+      "Non-alcohol & non-flammable"
     ],
     howToUse: "Spray onto hands or surfaces, rub evenly & let dry."
   }
