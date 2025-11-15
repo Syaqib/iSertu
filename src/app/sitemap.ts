@@ -15,14 +15,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
   const productRoutes = products.map((product) => ({
     url: `${BASE_URL}/products/${product.slug}`,
     lastModified: new Date(),
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
