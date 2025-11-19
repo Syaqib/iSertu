@@ -23,7 +23,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "iSertu - Premium Health & Wellness Products",
+  title: "Vlsclay - Premium Health & Wellness Products",
   description: "Transform your health naturally with our premium wellness products backed by science and natural ingredients.",
 };
 
