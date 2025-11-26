@@ -40,7 +40,7 @@ export default function Navbar() {
   const handleBrandClick = (productSlug: string) => {
     setIsBrandsOpen(false);
     router.push(`/products/${productSlug}`);
-  };
+    };
 
   const handleLanguageChange = (language: string) => {
     i18n.changeLanguage(language);
@@ -122,10 +122,10 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-14 relative">
           {/* Logo and Language Toggle */}
           <div className="flex items-center space-x-4">
-            <Link 
-              href="/" 
+          <Link 
+            href="/" 
               className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
-            >
+          >
               <Image
                 src="/images/VLSme-Logo.png"
                 alt="VLSme Logo"
@@ -133,7 +133,7 @@ export default function Navbar() {
                 height={1080}
                 className="h-24 w-auto"
               />
-            </Link>
+          </Link>
 
             {/* Desktop Language Toggle - Left side */}
             <div className="hidden md:flex items-center">
@@ -255,7 +255,7 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-
+                
                 {isBrandsOpen && (
                   <div className="absolute top-full left-0 mt-1 w-40 dropdown-menu p-2 z-50 dropdown-enter">
                     <div className="flex flex-col gap-1">
@@ -266,7 +266,7 @@ export default function Navbar() {
                       >
                         VLSuper
                       </button>
-
+                      
                       {/* VLSkin */}
                       <button
                         onClick={() => handleBrandClick('vlskin-bodywash-500ml')}
@@ -342,8 +342,8 @@ export default function Navbar() {
           </div>
         </div>
 
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
             <div className="md:hidden fixed left-0 right-0 top-14 animate-in slide-in-from-top-2 duration-300 z-40">
               <div className="w-full pt-0.5 pb-1 space-y-0.5 bg-white shadow-lg">
               
@@ -357,33 +357,33 @@ export default function Navbar() {
                 {t('navbar.products')}
               </button>
               
-                {/* Mobile Brands Section */}
-                <div className="px-3 py-2">
+              {/* Mobile Brands Section */}
+              <div className="px-3 py-2">
                   <div className="text-gray-700 text-base font-medium mb-2 px-1">{t('navbar.brands')}</div>
                   <div className="flex flex-col gap-1">
                     {/* VLSuper */}
-                    <button
-                      onClick={() => {
+                  <button
+                    onClick={() => {
                         handleBrandClick('vlsuper-sertu-liquid-clay-500ml');
-                        setIsMenuOpen(false);
-                      }}
+                      setIsMenuOpen(false);
+                    }}
                       className="text-left px-4 py-2 text-base hover:bg-gray-50 rounded-lg transition-colors duration-200 w-full"
-                    >
+                  >
                       VLSuper
-                    </button>
-
+                  </button>
+                  
                     {/* VLSkin */}
-                    <button
-                      onClick={() => {
+                  <button
+                    onClick={() => {
                         handleBrandClick('vlskin-bodywash-500ml');
-                        setIsMenuOpen(false);
-                      }}
+                      setIsMenuOpen(false);
+                    }}
                       className="text-left px-4 py-2 text-base hover:bg-gray-50 rounded-lg transition-colors duration-200 w-full"
                     >
                       VLSkin
-                    </button>
-                  </div>
+                  </button>
                 </div>
+              </div>
               
               <Link
                 href="/our-technology"

@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20">
-            {/* Header */}
+        {/* Header */}
             <div className="text-center mb-20">
               <h1 className="text-4xl font-light text-gray-900 mb-6">
                 {t('navbar.aboutVLS')}
@@ -29,8 +29,8 @@ export default function AboutPage() {
             <div className="rounded-xl p-6 md:p-8 mb-8 md:mb-12" style={{ backgroundColor: '#f0e7d3' }}>
               <p className="text-lg text-gray-700 text-center italic">
                 &quot;{t('pages.aboutUs.philosophy')}&quot;
-              </p>
-            </div>
+          </p>
+        </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               {/* Vision */}
@@ -39,7 +39,7 @@ export default function AboutPage() {
                 <p className="text-gray-600 leading-relaxed text-justify">
                   {t('pages.aboutUs.vision.description')}
                 </p>
-              </div>
+        </div>
 
               {/* Mission */}
               <div className="text-center">
@@ -47,8 +47,8 @@ export default function AboutPage() {
                 <p className="text-gray-600 leading-relaxed text-justify">
                   {t('pages.aboutUs.mission.description')}
                 </p>
-              </div>
-            </div>
+          </div>
+        </div>
 
             {/* Mission Statement */}
             <div className="mt-8 md:mt-12 text-center">

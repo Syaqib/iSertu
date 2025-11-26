@@ -78,7 +78,7 @@ export default function ProductGallery({ image }: ProductGalleryProps) {
             }}
           />
         )}
-      </div>
+        </div>
 
       {/* Magnifier Overlay - shows zoomed image */}
       {isHovering && (

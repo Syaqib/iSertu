@@ -55,17 +55,17 @@ export default function Hero({ showButtons = true, height = "auto" }: HeroProps)
             {t('hero.description')}
           </p>
           {showButtons && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                href="/products"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="/products"
                 className="bg-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 shadow-lg"
                 style={{ color: '#694900' }}
-                aria-label="Explore our products and start your wellness journey"
-              >
+              aria-label="Explore our products and start your wellness journey"
+            >
                 {t('hero.shopNow')}
-              </Link>
-              <Link
-                href="/about"
+            </Link>
+            <Link
+              href="/about"
                 className="border-2 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
                 style={{ 
                   borderColor: '#694900',
@@ -81,11 +81,11 @@ export default function Hero({ showButtons = true, height = "auto" }: HeroProps)
                   e.currentTarget.style.backgroundColor = 'transparent';
                   e.currentTarget.style.color = '#694900';
                 }}
-                aria-label="Learn more about our company and mission"
-              >
+              aria-label="Learn more about our company and mission"
+            >
                 {t('hero.learnMore')}
-              </Link>
-            </div>
+            </Link>
+          </div>
           )}
         </div>
       </div>

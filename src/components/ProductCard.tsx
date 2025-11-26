@@ -41,13 +41,13 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="flex-grow flex flex-col justify-end">
           <p className="text-gray-600 text-sm mb-3 line-clamp-2 text-justify">
             {t(`products.${product.slug}.shortDescription`)}
-          </p>
-          <div className="flex items-center justify-between">
-            <span className="text-xl font-bold text-gray-900">
-              RM{product.price.toFixed(2)}
-            </span>
-            <Link
-              href={`/products/${product.slug}`}
+        </p>
+        <div className="flex items-center justify-between">
+          <span className="text-xl font-bold text-gray-900">
+            RM{product.price.toFixed(2)}
+          </span>
+          <Link
+            href={`/products/${product.slug}`}
               className="text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
               style={{ backgroundColor: '#694900', '--hover-bg': '#755a1a' } as React.CSSProperties & { '--hover-bg': string }}
               onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#755a1a'; }}
@@ -56,10 +56,10 @@ export default function ProductCard({ product }: ProductCardProps) {
                 e.currentTarget.style.outlineColor = '#694900';
                 e.currentTarget.style.outlineWidth = '2px';
               }}
-              aria-label={`View details for ${product.name}`}
-            >
-              {t('products.view')}
-            </Link>
+            aria-label={`View details for ${product.name}`}
+          >
+            {t('products.view')}
+          </Link>
           </div>
         </div>
       </div>

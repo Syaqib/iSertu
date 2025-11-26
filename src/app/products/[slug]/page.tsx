@@ -132,9 +132,9 @@ export default function ProductPage({ params }: ProductPageProps) {
                     ))}
                   </ol>
                 ) : (
-                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                <p className="text-gray-700 leading-relaxed whitespace-pre-line">
                     {t(`products.${product.slug}.howToUse`)}
-                  </p>
+                </p>
                 )}
               </div>
             </div>
