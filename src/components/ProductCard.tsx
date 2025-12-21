@@ -14,12 +14,12 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
       {/* Product Image */}
-      <div className="aspect-square relative overflow-hidden">
+      <div className="aspect-square relative overflow-hidden bg-white">
         <Image
           src={product.image}
           alt={product.name}
           fill
-          className="object-contain"
+          className="object-cover"
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
         />
         <div className="w-full h-full flex items-center justify-center hidden" style={{ backgroundColor: '#f0e7d3' }}>

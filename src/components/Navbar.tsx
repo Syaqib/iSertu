@@ -121,7 +121,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 relative">
           {/* Logo and Language Toggle */}
-          <div className="flex items-center space-x-4 flex-shrink-0 min-w-[200px]">
+          <div className="flex items-center space-x-2 flex-shrink-0 min-w-[180px]">
           <Link 
             href="/" 
               className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
@@ -131,7 +131,7 @@ export default function Navbar() {
                 alt="VLSme Logo"
                 width={1080}
                 height={1080}
-                className="h-24 w-auto"
+                className="h-20 md:h-24 w-auto"
               />
           </Link>
 
@@ -140,7 +140,7 @@ export default function Navbar() {
               <div className="relative" ref={languageRef}>
                 <button
                   onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                  className="text-gray-700 hover:text-[#694900] px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1 whitespace-nowrap"
+                  className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1 whitespace-nowrap"
                 >
                   {i18n.language === 'en' ? 'EN' : 'BM'}
                   <svg
@@ -230,7 +230,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation - Centered with different spacing for EN/BM */}
-          <div className={`hidden md:block absolute left-1/2 transform -translate-x-1/2 ${i18n.language === 'bm' ? 'max-w-[calc(100%-250px)]' : 'max-w-[calc(100%-220px)]'}`}>
+          <div className={`hidden md:block absolute left-1/2 transform -translate-x-1/2 ${i18n.language === 'bm' ? 'max-w-[calc(100%-230px)]' : 'max-w-[calc(100%-200px)]'}`}>
             <div className={`flex items-center whitespace-nowrap ${i18n.language === 'bm' ? 'space-x-2' : 'space-x-3'}`}>
               <button
                 onClick={handleProductsClick}

@@ -115,13 +115,13 @@ export default function EventsGalleryPage() {
           <div className="px-6 md:px-8 pb-6 md:pb-8">
             <div className="relative max-w-5xl mx-auto">
               {/* Carousel Container */}
-              <div className="relative w-full h-[500px] md:h-[600px] bg-gray-100 rounded-lg overflow-hidden">
+              <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden">
                 {/* Image */}
                 <Image
                   src={eventImages[currentImageIndex]}
                   alt={`Event image ${currentImageIndex + 1}`}
                   fill
-                  className="object-contain"
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, 80vw"
                   priority={currentImageIndex === 0}
                 />
