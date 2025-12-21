@@ -27,7 +27,7 @@ export default function NewsPage() {
             </div>
             
             {/* Image Container */}
-            <div className="relative w-full" style={{ aspectRatio: '863/1080' }}>
+            <div className="relative w-full mb-6" style={{ aspectRatio: '863/1080' }}>
               <Image
                 src="/images/Poster VLS.jpeg"
                 alt={t('pages.news.latestNews')}
@@ -36,6 +36,13 @@ export default function NewsPage() {
                 sizes="(max-width: 768px) 100vw, 863px"
                 priority
               />
+            </div>
+            
+            {/* Hashtags */}
+            <div className="text-center">
+              <p className="text-base md:text-lg text-gray-600 font-medium">
+                #cwe #clay #airtanah #MineralRich #EarthScience #NaturalMinerals #ClayScience #sertu
+              </p>
             </div>
           </div>
         </div>

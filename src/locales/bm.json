@@ -4,6 +4,7 @@
     "brands": "Jenama",
     "ourTechnology": "Teknologi Kami",
     "ourClay": "Tanah Liat Kami",
+    "eventsGallery": "Acara & Galeri",
     "news": "Berita",
     "aboutVLS": "Tentang VLS",
     "ourStory": "Cerita Kami",
@@ -242,6 +243,32 @@
     },
     "news": {
       "latestNews": "Berita Terkini"
+    },
+    "eventsGallery": {
+      "title": "Acara dan Galeri",
+      "events": {
+        "productLaunch": {
+          "title": "Pelancaran Produk Vital Life Solution & Majlis Menandatangani MOU",
+          "date": "15 November 2025",
+          "venue": "Bangi Avenue Convention Center",
+          "content": {
+            "paragraph1": "Alhamdulillah, majlis pelancaran produk Vital Life Solution telah berlangsung dengan penuh bermakna. Majlis ini turut dihadiri wakil daripada MARA dan Halal International Selangor, sebagai tanda sokongan terhadap pembangunan industri berasaskan sumber semula jadi.",
+            "paragraph2": "Kami juga menandatangani MOU bersama GMS Marine Sdn Bhd, membuka ruang kerjasama baharu untuk memperluaskan penggunaan produk tanah liat ke peringkat lebih besar.",
+            "paragraph3": "Empat produk VLS yang diperkenalkan hari ini:",
+            "products": {
+              "vlsuperSertu": "VL Super Sertu – Liquid Clay",
+              "vlsuperSanitizer": "VL Super – Natural Sanitizer",
+              "vlskinBarSoap": "VLSkin – Clay Bar Soap",
+              "vlskinBodywash": "VLSkin – Liquid Bodywash"
+            },
+            "website": "Untuk maklumat lanjut: www.vlsclay.com",
+            "paragraph4": "Terima kasih kepada semua tetamu dan rakan-rakan industri yang hadir. Langkah ini hanyalah permulaan kepada perjalanan lebih besar dalam membawa kebaikan tanah liat kepada masyarakat.",
+            "signature": "Elmee Elias",
+            "position": "CEO",
+            "company": "Vital Life Solution Sdn Bhd"
+          }
+        }
+      }
     }
   }
 }

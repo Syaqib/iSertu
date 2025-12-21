@@ -121,7 +121,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 relative">
           {/* Logo and Language Toggle */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 flex-shrink-0 min-w-[200px]">
           <Link 
             href="/" 
               className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
@@ -140,7 +140,7 @@ export default function Navbar() {
               <div className="relative" ref={languageRef}>
                 <button
                   onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                  className="text-gray-700 hover:text-[#694900] px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+                  className="text-gray-700 hover:text-[#694900] px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1 whitespace-nowrap"
                 >
                   {i18n.language === 'en' ? 'EN' : 'BM'}
                   <svg
@@ -230,11 +230,11 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation - Centered with different spacing for EN/BM */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
-            <div className={`flex items-center whitespace-nowrap ${i18n.language === 'bm' ? 'space-x-4' : 'space-x-3'}`}>
+          <div className={`hidden md:block absolute left-1/2 transform -translate-x-1/2 ${i18n.language === 'bm' ? 'max-w-[calc(100%-250px)]' : 'max-w-[calc(100%-220px)]'}`}>
+            <div className={`flex items-center whitespace-nowrap ${i18n.language === 'bm' ? 'space-x-2' : 'space-x-3'}`}>
               <button
                 onClick={handleProductsClick}
-                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-xs md:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.products')}
               </button>
@@ -243,11 +243,11 @@ export default function Navbar() {
               <div className="relative" ref={brandsRef}>
                 <button
                   onClick={() => setIsBrandsOpen(!isBrandsOpen)}
-                  className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1 whitespace-nowrap"
+                  className="text-gray-700 hover:text-[#694900] px-1 py-2 text-xs md:text-sm font-medium transition-colors duration-200 flex items-center gap-1 whitespace-nowrap"
                 >
                   {t('navbar.brands')}
                   <svg
-                    className={`w-4 h-4 transition-transform duration-200 ${isBrandsOpen ? 'rotate-180' : ''}`}
+                    className={`w-3 h-3 md:w-4 md:h-4 transition-transform duration-200 ${isBrandsOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -281,37 +281,43 @@ export default function Navbar() {
               
               <Link
                 href="/our-technology"
-                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-xs md:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.ourTechnology')}
               </Link>
               <Link
                 href="/our-clay"
-                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-xs md:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.ourClay')}
               </Link>
               <Link
+                href="/events-gallery"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-xs md:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+              >
+                {t('navbar.eventsGallery')}
+              </Link>
+              <Link
                 href="/news"
-                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-xs md:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.news')}
               </Link>
               <Link
                 href="/about"
-                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-xs md:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.aboutVLS')}
               </Link>
               <Link
                 href="/our-story"
-                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-xs md:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.ourStory')}
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-xs md:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {t('navbar.contact')}
               </Link>
@@ -404,6 +410,13 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.ourClay')}
+              </Link>
+              <Link
+                href="/events-gallery"
+                className="text-gray-700 hover:text-[#694900] block px-4 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navbar.eventsGallery')}
               </Link>
               <Link
                 href="/news"

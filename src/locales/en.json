@@ -4,6 +4,7 @@
     "brands": "Brands",
     "ourTechnology": "Our Technology",
     "ourClay": "Our Clay",
+    "eventsGallery": "Events & Gallery",
     "news": "News",
     "aboutVLS": "About VLS",
     "ourStory": "Our Story",
@@ -242,6 +243,32 @@
     },
     "news": {
       "latestNews": "Latest News"
+    },
+    "eventsGallery": {
+      "title": "Events and Gallery",
+      "events": {
+        "productLaunch": {
+          "title": "Vital Life Solution Product Launch & MOU Signing Ceremony",
+          "date": "15 November 2025",
+          "venue": "Bangi Avenue Convention Center",
+          "content": {
+            "paragraph1": "Alhamdulillah, the Vital Life Solution product launch ceremony was held with great significance. The event was also attended by representatives from MARA and Halal International Selangor, as a sign of support for the development of industries based on natural resources.",
+            "paragraph2": "We also signed an MOU with GMS Marine Sdn Bhd, opening new avenues for cooperation to expand the use of clay products to a larger scale.",
+            "paragraph3": "Four VLS products introduced today:",
+            "products": {
+              "vlsuperSertu": "VL Super Sertu – Liquid Clay",
+              "vlsuperSanitizer": "VL Super – Natural Sanitizer",
+              "vlskinBarSoap": "VLSkin – Clay Bar Soap",
+              "vlskinBodywash": "VLSkin – Liquid Bodywash"
+            },
+            "website": "For more information: www.vlsclay.com",
+            "paragraph4": "Thank you to all guests and industry partners who attended. This step is just the beginning of a larger journey in bringing the benefits of clay to the community.",
+            "signature": "Elmee Elias",
+            "position": "CEO",
+            "company": "Vital Life Solution Sdn Bhd"
+          }
+        }
+      }
     }
   }
 }
