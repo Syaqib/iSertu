@@ -67,7 +67,7 @@ export default function EventsGalleryPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/45"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center text-white drop-shadow-md">
