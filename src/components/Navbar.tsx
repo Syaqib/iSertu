@@ -292,6 +292,12 @@ export default function Navbar() {
                 {t('navbar.ourClay')}
               </Link>
               <Link
+                href="/news"
+                className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+              >
+                {t('navbar.news')}
+              </Link>
+              <Link
                 href="/about"
                 className="text-gray-700 hover:text-[#694900] px-1 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
@@ -398,6 +404,13 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.ourClay')}
+              </Link>
+              <Link
+                href="/news"
+                className="text-gray-700 hover:text-[#694900] block px-4 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navbar.news')}
               </Link>
               <Link
                 href="/about"

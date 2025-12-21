@@ -4,6 +4,7 @@
     "brands": "Jenama",
     "ourTechnology": "Teknologi Kami",
     "ourClay": "Tanah Liat Kami",
+    "news": "Berita",
     "aboutVLS": "Tentang VLS",
     "ourStory": "Cerita Kami",
     "contact": "Hubungi Kami",
@@ -238,6 +239,9 @@
           "text": "Setiap produk dikuasai oleh prinsip yang sama — kesucian melalui kesederhanaan. Tiada bahan kimia keras. Tiada bahan tambahan yang tidak perlu. Hanya inovasi bersih yang lahir dari tanah liat, air, dan sains."
         }
       ]
+    },
+    "news": {
+      "latestNews": "Berita Terkini"
     }
   }
 }

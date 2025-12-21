@@ -52,6 +52,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/news"
+                  className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
+                >
+                  {t('navbar.news')}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/about"
                   className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
                 >

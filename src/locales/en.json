@@ -4,6 +4,7 @@
     "brands": "Brands",
     "ourTechnology": "Our Technology",
     "ourClay": "Our Clay",
+    "news": "News",
     "aboutVLS": "About VLS",
     "ourStory": "Our Story",
     "contact": "Contact Us",
@@ -238,6 +239,9 @@
           "text": "Each product is powered by the same principle — purity through simplicity. No harsh chemicals. No unnecessary additives. Just clean innovation born from clay, water, and science."
         }
       ]
+    },
+    "news": {
+      "latestNews": "Latest News"
     }
   }
 }
