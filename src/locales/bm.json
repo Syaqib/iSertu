@@ -139,15 +139,14 @@
   },
   "contact": {
     "title": "Hubungi Kami",
-    "subtitle": "Hubungi kami untuk sebarang pertanyaan atau sokongan",
     "manufacturedBy": "Dikeluarkan oleh",
-    "trustedAgency": "Agensi Jualan & Pemasaran Dipercayai",
-    "companyInfo": "Maklumat Syarikat",
-    "companyName": "Nama Syarikat",
+    "company": "Syarikat",
+    "companyName": "Vital Life Solution Sdn Bhd",
     "address": "Alamat",
-    "contactDetails": "Butiran Hubungan",
-    "telephone": "Telefon",
-    "additionalInfo": "Maklumat Tambahan",
+    "addressLine1": "184. Jalan Nilai 7/1, Kawasan Perindustrian Nilai 7,",
+    "addressLine2": "71800 Nilai, Negeri Sembilan Darul Khusus",
+    "phone": "Telefon",
+    "phoneNumber": "+60123552406",
     "description": "Kami di sini untuk membantu anda dengan sebarang soalan mengenai produk atau perkhidmatan kami. Jangan teragak-agak untuk menghubungi kami menggunakan maklumat hubungan yang disediakan di atas, dan kami akan membalas anda secepat mungkin."
   },
   "clayWaterEnzyme": {
